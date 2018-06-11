@@ -1,0 +1,237 @@
+/* pages/searchys/searchys.wxss */
+@import '../../static/default.wxss';
+.topdiv{
+  width:100%;
+  height:100rpx;
+  overflow:hidden;
+  display: flex;
+  -webkit-display:flex;
+  justify-content: center;
+  align-content: center;
+  color:#e3e3e3;
+  font-size:25rpx;
+}
+.topdiv text{
+  align-self: center;
+}
+.topdiv .td{
+  flex:1;
+  color:#000;
+  font-size:32rpx;
+  line-height:64rpx;
+  position: relative;
+  text-align: center;
+  padding:20rpx 0;
+}
+.topdiv .td::after{
+  position: absolute;
+  content: " ";
+  border:15rpx solid rgba(0,0,0,0);
+  border-top:15rpx solid #3CC51F;
+  top:50%;
+  right:10rpx;
+  transform: translateY(-50);
+  display: none;
+}
+.topdiv .td.showafter{
+  border-bottom:5rpx solid #3CC51F;
+}
+.topdiv .td.showafter::after{
+  display: block;
+}
+.searchdiv{
+  width:80%;
+  height:66rpx;
+  line-height:66rpx;
+  border:1px solid #cacaca;
+  background:#fff;
+  border-radius:66rpx;
+  margin:50rpx auto;
+  display: flex;
+  -webkit-display:flex;
+  justify-content: center;
+}
+.searchdiv view{
+  flex: 1;
+  margin-left:100rpx;
+  align-self: center;
+}
+.searchdiv view image{
+  width:30rpx;
+}
+.searchdiv input{
+  flex:8;
+  align-self: center;
+  color:#a1a1a1;
+  font-size:30rpx;
+}
+.sercla{
+  color:#a1a1a1;
+  font-size:30rpx;
+}
+/* 这里有部分css在公共部分 */
+.yuesaodiv .right .top .name{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis
+}
+.yuesaodiv .right .top .xin{
+  padding:0 10rpx;
+  padding-top:5rpx;
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+.yuesaodiv .right .top .fen{
+  flex:1;
+}
+.yuesaodiv .right .top .ysbz image{
+  width:100%;
+  margin-top:5rpx;
+}
+.yuesaodiv .right .top .xin image{
+  width:25rpx;
+  margin:auto 2rpx;
+}
+.yuesaodiv .right .top .ysbz{
+  margin:auto 5rpx;
+}
+.desc{
+  width:100%;
+  padding-top:20rpx;
+  line-height:30rpx;
+  color:#5e5e5e;
+  font-size:20rpx;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.perprize{
+  width:100%;
+  font-size:40rpx;
+  color:#3CC51F;
+  margin-top:20rpx;
+}
+.perprize text{
+  font-size:25rpx;
+  color:#646464;
+}
+.shaixuan{
+  width:100%;
+  height:100vh;
+  background:rgba(0,0,0,.6);
+  position: fixed;
+  left:0;
+  top:0;
+  z-index:10;
+}
+.shaixuan .conshow{
+  width:100%;
+  height:auto;
+  overflow:hidden;
+  background:#ebf0f6;
+  position: absolute;
+  bottom:0;
+  left:0;
+}
+.shaixuan .conshow .title{
+  width:100%;
+  height:90rpx;
+  line-height:90rpx;
+  background:#fff;
+  font-size:24rpx;
+  color:#000;
+}
+.shaixuan .conshow .title .left, .shaixuan .conshow .title .right{
+  width:30%;
+  color:#9a9a9a;
+  float:left;
+  padding:0 20rpx;
+  text-align: left;
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+}
+.shaixuan .conshow .title .cen{
+  width:40%;
+  float:left;
+  font-size:30rpx;
+  text-align: center;
+}
+.shaixuan .conshow .title .right{
+  color:#3CC51F;
+  text-align: right;
+}
+.shaixuan .shwobody{
+  width:100%;
+  height:auto;
+  overflow:hidden;
+  padding:0 10rpx;
+  background:#fff;
+  margin-top:30rpx;
+  border-top:1px solid #ededed;
+}
+.shaixuan .shwobody .lan1{
+  width:90%;
+  height:85rpx;
+  line-height:85rpx;
+  color:#000;
+  border-bottom:1px solid #d6d6d6;
+  font-size:25rpx;
+  margin:0 auto;
+}
+.shaixuan .shwobody .lan1 .left, .shaixuan .shwobody .lan1 .right{
+  width:40%;
+  height:100%;
+  float:left;
+}
+.shaixuan .shwobody .lan1 .right{
+  width:60%;
+  position: relative;
+}
+.shaixuan .shwobody .lan1 .right.addjt::after{
+  content: ' ';
+  width:20rpx;
+  height:20rpx;
+  border-right:2px solid #c7c7c7;
+  border-bottom:2px solid #c7c7c7;
+  transform: rotate(-45deg);
+  position: absolute;
+  right:20rpx;
+  top:35rpx;
+}
+.shaixuan .shwobody .lan2{
+  width:90%;
+  height:auto;
+  line-height:85rpx;
+  color:#000;
+  border-bottom:1px solid #d6d6d6;
+  font-size:25rpx;
+  margin:0 auto;
+}
+.shaixuan .shwobody .lan2 .top{
+  width:100%;
+  color:#000;
+  height:85rpx;
+  line-height: 85rpx;
+  text-align: left;
+}
+.shaixuan .shwobody .lan2 .tabgetter{
+  color:#3CC51F;
+  height:auto;
+  padding-bottom:20rpx;
+  overflow:hidden;
+}
+.shaixuan .shwobody .lan2 .tabgetter view{
+  width:20%;
+  height:45rpx;
+  line-height:45rpx;
+  float:left;  
+  margin:10rpx;
+  border:1px solid #3CC51F;
+  text-align: center;
+}
+.shaixuan .shwobody .lan2 .tabgetter view.sty{
+  background:#3CC51F;
+  color:#fff;
+}

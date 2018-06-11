@@ -1,0 +1,128 @@
+/* pages/auth/auth.wxss */
+@import '../../static/default.wxss';
+.tttile{
+  width:100%;
+  height:90rpx;
+  line-height:90rpx;
+  background:#ebf0f6;
+  border-top:1px solid #e2e2e2;
+  border-bottom:1px solid #e2e2e2;
+  color:#787c7f;
+  padding:0 30rpx;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size:35rpx;
+}
+.cccon{
+  width:100%;
+  height:auto;
+  overflow:hidden;
+  padding:20rpx 30rpx;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background:#fff;
+  counter-reset: item;
+}
+.cccon .tongguo{
+  width:100%;
+  height:50rpx;
+  line-height:50rpx;
+  color:#8f8f8f;
+  font-size:25rpx;
+  margin:10rpx auto;
+}
+.cccon .tongguo text{
+  color:#000;
+  font-weight:bold;
+}
+.juz{
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  height:100rpx;
+}
+.cccon .renz{
+  width:180rpx;
+  height:50rpx;
+  color:#f1a710;
+  padding-top:10rpx;
+  padding-bottom:10rpx;
+  font-size:30rpx;
+  border:1px solid #f1a710;
+  margin-right:30rpx;
+  text-align: center;
+  line-height:50rpx;
+  align-self: center;
+}
+.cccon .imgrz{
+  width:250rpx;
+  height:40rpx;
+  align-self: center;
+  padding:14rpx 15rpx;
+  border:1px solid #f1a710;
+}
+.cccon .imgkuang{
+  width:49%;
+  height:250rpx;
+  overflow: hidden;
+  float:left;
+}
+.cccon .imgkuang:nth-child(2n-1){
+  margin-right:2%;
+}
+.cccon .imgkuang image{
+  width:100%;
+}
+.cccon .btt{
+  width:100%;
+  height:100rpx;
+  line-height:100rpx;
+  font-size:35rpx;
+  color:#000;
+  font-weight:bold;
+}
+.cccon .bttwen{
+  width:100%;
+  height:50rpx;
+  line-height:50rpx;
+  color:#848484;
+  text-align: left;
+  margin:10rpx auto;
+  font-size:25rpx;
+}
+.cccon .bttwen:before {
+	counter-increment: item;
+	content: counter(item)".";
+}
+.fwjqdiv{
+  width:100%;
+  height:auto;
+  overflow:hidden;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: row wrap;
+}
+.fwjqdiv .son{
+  min-width:30%;
+  flex:1;
+  color:#7e7e7e;
+  font-size:25rpx;
+  margin:10rpx;
+  text-align: center;
+}
+.fwjqdiv .son image{
+  width:100%;
+  margin-bottom:20rpx;
+}
+.liucheng{
+  width:100%;
+  height:auto;
+  overflow: hidden;
+  padding:10rpx;
+  box-sizing: border-box;
+  text-align: center;
+}
+.liucheng image{
+  width:100%;
+}

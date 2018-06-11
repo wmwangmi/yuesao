@@ -1,0 +1,28 @@
+/* pages/workfc/workfc.wxss */
+@import '../../static/default.wxss';
+.contener{
+  width:100%;
+  height:auto;
+  overflow:hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-flow: row wrap;
+  padding:10rpx;
+  box-sizing: border-box;
+}
+.contener .img{
+  flex:1;
+  height:250rpx;
+  min-width: 30%;
+  max-width:33%;
+  margin-bottom:10rpx;
+}
+.contener .img:nth-child(2n+1){
+  margin-left:10rpx;
+  margin-right:10rpx;
+}
+.contener .img image{
+  width:100%;
+  height:100%;
+}

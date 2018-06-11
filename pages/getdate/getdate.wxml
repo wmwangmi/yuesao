@@ -1,0 +1,29 @@
+<!--pages/getdate/getdate.wxml-->
+<view class='dateT'>
+  <view class='jt1' bindtap='prevdata'></view>
+  <view class='ttdd'>
+    <picker mode="date" value="{{date}}" fields='month' start="2015-09" end="2019-10" bindchange="bindDateChange">
+      <view class="picker">
+        {{date}}
+      </view>
+    </picker>
+  </view>
+  <view class='jt2' bindtap='nextdata'></view>
+</view>
+<view class='dateT'>
+  <view class='xqi'>日</view>
+  <view class='xqi'>一</view>
+  <view class='xqi'>二</view>
+  <view class='xqi'>三</view>
+  <view class='xqi'>四</view>
+  <view class='xqi'>五</view>
+  <view class='xqi'>六</view>
+</view>
+<view class='dateBan'>
+  <view wx:for='{{databanls}}' data-val='{{item.dt}}' data-type='{{item.tp}}' wx:key='index' class='son {{item.defaulcla?"defaulcla":""}} {{item.nicecla?"classnic":""}}' bindtap='datablock'>{{item.dt}}</view>
+</view>
+<view class='tishi'>
+  <view class='yuan'></view>
+  
+  <view class='text'>档期已占用，月嫂无法接单</view>
+</view>

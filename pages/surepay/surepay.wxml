@@ -1,0 +1,38 @@
+<!--pages/surepay/surepay.wxml-->
+<view class='dtt'>费用合计</view>
+<view class='conk'>
+  <view class='line'>
+    <view class='left'>住家月子服务（26）天</view>
+    <view class='right aliright'>￥{{heji}}</view>
+  </view>
+</view>
+<view class='dtt'>支付金额</view>
+<view class='conk'>
+  <view class='line' bindtap='selectpayfn'>
+    <view class='left {{!selectpay?"addquan":"addquan2"}}'>支付订金（全额20%）</view>
+    <view class='right aliright'>￥{{dingjin}}</view>
+  </view>
+  <view class='line' bindtap='selectpayfn2'>
+    <view class='left {{!selectpay2?"addquan":"addquan2"}}'>支付全款</view>
+    <view class='right aliright'>￥{{quankuan}}</view>
+  </view>
+  <view class='line'>
+    <view class='left clored'>总金额</view>
+    <view class='right aliright clored'>￥{{zonge}}</view>
+  </view>
+</view>
+<view class='dtt'>支付方式</view>
+<view class='conk'>
+  <view class='weixpay'>
+    <view class='imgdiv'>
+      <image mode='widthFix' src='https://www.bodylive.cn/images/welogo.png' />
+    </view>
+    <view class='wendiv'>
+      <view>微信支付</view>
+      <view>推荐微信6.5及以上版本的用户使用</view>
+    </view>
+  </view>
+</view>
+<view class='pushdd'>
+立即支付
+</view>

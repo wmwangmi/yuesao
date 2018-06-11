@@ -1,0 +1,113 @@
+/* pages/getdate/getdate.wxss */
+@import '../template/default.wxss';
+.dateT{
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+  background:#ebf0f6;
+  position: relative;
+  margin-bottom:10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.dateT .jt1,.dateT .jt2{
+  width:15%;
+  height:100%;
+  float:left;
+}
+.dateT .jt1::after,.dateT .jt2::after{
+  content: ' ';
+  width:25rpx;
+  height:25rpx;
+  top:25rpx;  
+  border:2px solid #3CC51F;
+  position:absolute;
+}
+.dateT .jt1::after{
+  transform: rotate(45deg);
+  left:20rpx;
+  border-right:0;
+  border-top:0;
+}
+.dateT .jt2::after{
+  transform: rotate(45deg);
+  right:20rpx;
+  border-left:0;
+  border-bottom:0;
+}
+.dateT .ttdd{
+  width:70%;
+  height:100%;
+  text-align: center;
+  color:#000;
+  float:left;
+  font-size: 30rpx;
+}
+.dateT .xqi{
+  flex:1;
+  height:100%;
+  color:#3CC51F;
+  text-align: center;
+  font-size:30rpx;
+}
+.dateBan{
+  width:100%;
+  height:auto;
+  overflow:hidden;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+.dateBan .son{
+  flex:1;
+  min-width:10%;
+  height:80rpx;
+  line-height:80rpx;
+  background:#fff;
+  margin:15rpx;
+  box-sizing: border-box;
+  text-align: center;
+  color:#7e7e7e;
+  font-size:35rpx;
+}
+.dateBan .son.defaulcla{
+  border-radius:100%;
+  -webkit-border-radius:100%;
+  color:#000;
+  font-weight: bold;
+}
+ .dateBan .son.classnic{
+  border-radius:100%;
+  -webkit-border-radius:100%;
+  background:#3CC51F;
+  color:#fff;
+}
+.tishi{
+  width:100%;
+  height:auto;
+  overflow:hidden;
+  text-align: center;
+  color:#d3d3d3;
+  line-height:50rpx;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.tishi .yuan{
+  width:30rpx;
+  height:30rpx;
+  background:#3CC51F;
+  display: inline-block;
+  border-radius:100%;
+  -webkit-border-radius:100%;
+  align-self: center;
+}
+.tishi .text{
+  display: inline-block;
+  height:50rpx;
+  line-height:50rpx;
+  font-size:20rpx;
+  padding-left:20rpx;
+}

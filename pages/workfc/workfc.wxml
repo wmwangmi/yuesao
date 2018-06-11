@@ -1,0 +1,6 @@
+<!--pages/workfc/workfc.wxml-->
+<view class='contener'>
+  <view class='img' wx:for='{{imgdata}}' wx:key='index' >
+    <image mode='aspectFill' src='{{item}}' />
+  </view>
+</view>

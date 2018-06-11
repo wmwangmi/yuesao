@@ -1,0 +1,56 @@
+/* pages/paysuccuss/paysuccuss.wxss */
+@import '../../static/default.wxss';
+.icondiv{
+  width:200rpx;
+  height:200rpx;
+  border-radius:100%;
+  background:#3CC51F;
+  position: relative;
+  margin:50rpx auto;
+}
+.icondiv::after{
+  position: absolute;
+  left:50%;
+  top:40%;
+  content: ' ';
+  width:30rpx;
+  height:90rpx;
+  border-right:6rpx solid #fff;
+  border-bottom:6rpx solid #fff;
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+.zhifutx{
+  width:100%;
+  height:60rpx;
+  line-height:60rpx;
+  color:#000;
+  font-size:40rpx;
+  text-align: center;
+}
+.tx{
+  width:100%;
+  height:30rpx;
+  line-height:30rpx;
+  color:#aeaeae;
+  font-size:25rpx;
+  text-align: center;
+  margin:20rpx auto;
+  margin-bottom:40rpx;
+}
+.but{
+  width:90%;
+  height:80rpx;
+  line-height:80rpx;
+  text-align: center;
+  border-radius:10rpx;
+  margin:auto;
+  margin-bottom:20rpx;
+}
+.but.t1{
+  border:1px solid #afafaf;
+  color:#000;
+}
+.but.t2{
+  background:#3CC51F;
+  color:#fff;
+}

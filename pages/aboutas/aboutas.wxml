@@ -1,0 +1,125 @@
+<!--pages/aboutas/aboutas.wxml-->
+<view class='aban'>
+  <image mode='widthFix' src='https://www.bodylive.cn/images/jjbanner.jpg' />
+  <view class='btt'>
+    <text>佳佳母婴护理平台强力打造母婴护理专家</text>
+    <text>来自资深妇幼医院从业20多年经验专家一对一VIP专属服务</text>
+  </view>
+</view>
+<view class='jjtit'>
+  十年专业<text>实力保证</text>
+</view>
+<view class='baicontt'>
+  <view class='tt'>
+    <image mode='widthFix' src='https://www.bodylive.cn/images/jia.png' />{{aboutob.title}}
+  </view>
+  <view class='content'>
+    {{aboutob.content}}
+  </view>
+  <view class='logott'>
+    <text>使命：</text>关爱母婴的健康与幸福
+  </view>
+  <view class='logott'>
+    <text>宗旨：</text>向客户奉上我们发自心底的健康关怀
+  </view>
+  <view class='logott'>
+    <text>价值观：</text>客户是亲人，同事是家人，公司是大家庭
+  </view>
+  <view class='logott'>
+    <text>企业精神：</text>开放包容、分享协作、速度极致
+  </view>
+  <view class='logott'>
+    <text>企业理念：</text>爱心、感恩、利他
+  </view>
+  <image class='yzimg' mode='widthFix' src='{{app.originurl}}{{aboutob.thumb}}' />
+  <view class='vediodiv'>
+    <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" poster="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527841749278&di=eaa66581ee1aca8490135ba07ab915f2&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fd50735fae6cd7b896fede657052442a7d8330e65.jpg" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls='true'></video>
+  </view>
+</view>
+
+<view class='jjtit'>
+  家家<text>月嫂平台</text>
+</view>
+<view class='baicontt'>
+  <image class='yspt' mode='widthFix' src='https://www.bodylive.cn/images/yspt.jpg' />
+</view>
+<view class='jjtit'>
+  荣誉<text>资质</text>
+</view>
+<view class='baicontt'>
+  <image class='yspt' mode='widthFix' src='https://www.bodylive.cn/images/ryzz.jpg' />
+</view>
+<view class='jjtit'>
+  家家<text>月子学院</text>
+</view>
+<view class='baicontt sty'>
+  <view class='jjie'>
+    家家月嫂月子学院是月嫂培训界的黄埔军校，打造母婴护理行业的特种兵，为您和宝宝的健康保驾护航！
+  </view>
+  <view class='jjie'>
+    月子学院致力于打造高水平，高质量，高素养母婴护理人才的职业技能培训基地。学院拥有实力雄厚的行业背景、业界资深的讲师团队、专业系统的课程体系以及强大的运营管理团队，常年为平台输送专业化、规范化、职业化、标准化的高端月嫂。
+  </view>
+  <view class='jjieimg'>
+    <image mode='widthFix' src='https://www.bodylive.cn/images/myxy1.jpg' />
+    <image mode='widthFix' src='https://www.bodylive.cn/images/myxy2.jpg' />
+  </view>
+</view>
+<view class='jjtit'>
+  家家<text>团队</text>
+</view>
+<view class='baicontt sty2'>
+  <view class='jjson'>
+    <view class='jjtximg'>
+      <image mode='widthFix' src='https://www.bodylive.cn/images/yyfw4.jpg' />
+    </view>
+    <view class='jjname'>将慧娟</view>
+    <view class='jjwen'>主管护师 婴儿护理师</view>
+    <view class='jjwen'>二级公共营养师</view>
+    <view class='jjwen'>产后修复师 高级护理师</view>
+  </view>
+  <view class='jjson'>
+    <view class='jjtximg'>
+      <image mode='widthFix' src='https://www.bodylive.cn/images/yyfw4.jpg' />
+    </view>
+    <view class='jjname'>将慧娟</view>
+    <view class='jjwen'>主管护师 婴儿护理师</view>
+    <view class='jjwen'>二级公共营养师</view>
+    <view class='jjwen'>产后修复师 高级护理师</view>
+  </view>
+  <view class='jjson'>
+    <view class='jjtximg'>
+      <image mode='widthFix' src='https://www.bodylive.cn/images/yyfw4.jpg' />
+    </view>
+    <view class='jjname'>将慧娟</view>
+    <view class='jjwen'>主管护师 婴儿护理师</view>
+    <view class='jjwen'>二级公共营养师</view>
+    <view class='jjwen'>产后修复师 高级护理师</view>
+  </view>
+  <view class='jjson'>
+    <view class='jjtximg'>
+      <image mode='widthFix' src='https://www.bodylive.cn/images/yyfw4.jpg' />
+    </view>
+    <view class='jjname'>将慧娟</view>
+    <view class='jjwen'>主管护师 婴儿护理师</view>
+    <view class='jjwen'>二级公共营养师</view>
+    <view class='jjwen'>产后修复师 高级护理师</view>
+  </view>
+  <view class='jjson'>
+    <view class='jjtximg'>
+      <image mode='widthFix' src='https://www.bodylive.cn/images/yyfw4.jpg' />
+    </view>
+    <view class='jjname'>将慧娟</view>
+    <view class='jjwen'>主管护师 婴儿护理师</view>
+    <view class='jjwen'>二级公共营养师</view>
+    <view class='jjwen'>产后修复师 高级护理师</view>
+  </view>
+  <view class='jjson'>
+    <view class='jjtximg'>
+      <image mode='widthFix' src='https://www.bodylive.cn/images/yyfw4.jpg' />
+    </view>
+    <view class='jjname'>将慧娟</view>
+    <view class='jjwen'>主管护师 婴儿护理师</view>
+    <view class='jjwen'>二级公共营养师</view>
+    <view class='jjwen'>产后修复师 高级护理师</view>
+  </view>
+</view>

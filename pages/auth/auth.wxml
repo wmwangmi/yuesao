@@ -1,0 +1,105 @@
+<!--pages/auth/auth.wxml-->
+<view class='tttile'>
+  认证信息
+</view>
+<view class='cccon'>
+  <view class='juz'>
+    <text class='renz'>{{ysbg.spu}}</text>
+    <!-- <image class='imgrz' src='https://www.bodylive.cn/images/yuesaobz.png' /> -->
+  </view>
+  <view class='tongguo'>
+    通过家家月嫂<text>“三审”</text>考核系统
+  </view>
+  <view class='tongguo'>
+    <text>163</text>项专业能力测评
+  </view>
+  <view class='tongguo'>
+    服务过<text>{{ysbg.volume}}</text>个幸福家庭
+  </view>
+  <view class='tongguo'>
+    客户满意度<text>100%</text>
+  </view>
+</view>
+<view class='tttile'>
+  证书情况
+</view>
+<view class='cccon'>
+  <view class='imgkuang' wx:for='{{ysbg.yz_book}}' wx:key='index'>
+    <image mode='widthFix' src='{{app.allconfig.originurl}}{{item.image_url}}' />
+  </view>
+</view>
+<view class='tttile'>
+  三审考核系统
+</view>
+<view class='cccon'>
+  <view class='btt'>方式一：服务能力</view>
+  <view class='bttwen'>
+    具备处理月子里常见及异常问题的能力
+  </view>
+  <view class='bttwen'>
+    具备护理早产儿、双胞胎的能力
+  </view>
+  <view class='bttwen'>
+    具备进行系统早期启蒙教育的能力
+  </view>
+  <view class='bttwen'>
+    具备进行乳腺疏通及促进母乳喂养的能力
+  </view>
+  <view class='bttwen'>
+    具备有效沟通及产后不良情绪疏导的能力
+  </view>
+  <view class='bttwen'>
+    具备引导宝宝养成良好行为习惯及性格的能力
+  </view>
+  <view class='btt'>
+    方式二：服务技巧
+  </view>
+  <view class='fwjqdiv'>
+    <view class='son'>
+      <image mode='widthFix' src='https://www.bodylive.cn/images/muying1.jpg' />
+      <text>专业母婴护理</text>
+    </view>
+    <view class='son'>
+      <image mode='widthFix' src='https://www.bodylive.cn/images/muying2.jpg' />
+      <text>贴心月子照护</text>
+    </view>
+    <view class='son'>
+      <image mode='widthFix' src='https://www.bodylive.cn/images/muying3.jpg' />
+      <text>母乳喂养指导</text>
+    </view>
+    <view class='son'>
+      <image mode='widthFix' src='https://www.bodylive.cn/images/muying4.jpg' />
+      <text>科学营养膳食</text>
+    </view>
+    <view class='son'>
+      <image mode='widthFix' src='https://www.bodylive.cn/images/muying5.jpg' />
+      <text>系统早教启蒙</text>
+    </view>
+    <view class='son'>
+      <image mode='widthFix' src='https://www.bodylive.cn/images/muying6.jpg' />
+      <text>育儿技巧指导</text>
+    </view>
+  </view>
+  
+  <view class='btt'>
+    方式三：筛选流程
+  </view>
+  <view class='liucheng'>
+    <image mode='widthFix' src='https://www.bodylive.cn/images/liucheng.png' />
+  </view>
+</view>
+<!-- <view class='tttile'>
+  关于家家月子学院
+</view>
+<view class='cccon'>
+  <view class='jjie'>
+    家家月嫂月子学院是月嫂培训界的黄埔军校，打造母婴护理行业的特种兵，为您和宝宝的健康保驾护航！
+  </view>
+  <view class='jjie'>
+    月子学院致力于打造高水平，高质量，高素养母婴护理人才的职业技能培训基地。学院拥有实力雄厚的行业背景、业界资深的讲师团队、专业系统的课程体系以及强大的运营管理团队，常年为平台输送专业化、规范化、职业化、标准化的高端月嫂。
+  </view>
+  <view class='jjieimg'>
+    <image mode='widthFix' src='https://www.bodylive.cn/images/myxy1.jpg' />
+    <image mode='widthFix' src='https://www.bodylive.cn/images/myxy2.jpg' />
+  </view>
+</view> -->

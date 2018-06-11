@@ -1,0 +1,74 @@
+<!--pages/ddxqing/ddxqing.wxml-->
+<view class='tonglans'>
+  <view class='tonglaner'>
+    <view class='lefter'>订单编号</view>
+    <view class='righter'>{{listxq.order_sn}}</view>
+  </view>
+</view>
+<view class='tonglans'>
+  <view class='tonglaner'>
+    <view class='lefter'>服务项目</view>
+    <view class='righter'>住家月子服务（26）</view>
+  </view>
+  <view class='tonglaner'>
+    <view class='lefter'>预产期</view>
+    <view class='righter'>{{listxq.order_time}}</view>
+  </view>
+  <view class='tonglaner'>
+    <view class='lefter'>服务天数</view>
+    <view class='righter'>{{listxq.fw_t_num}}</view>
+  </view>
+  <view class='tonglaner'>
+    <view class='lefter'>服务地址</view>
+    <view class='righter'>{{listxq.address}}</view>
+  </view>
+</view>
+<view class='tonglans'>
+  <view class='tonglaner'>
+    <view class='lefter'>联系人</view>
+    <view class='righter'>{{listxq.consignee}}</view>
+  </view>
+  <view class='tonglaner'>
+    <view class='lefter'>联系方式</view>
+    <view class='righter'>{{listxq.mobile}}</view>
+  </view>
+  <view class='tonglaner'>
+    <view class='lefter'>备注</view>
+    <view class='righter'>{{listxq.user_note}}</view>
+  </view>
+  <view class='tonglaner'>
+    <view class='lefter'>服务价格</view>
+    <view class='righter'>{{listxq.ys_price}}</view>
+  </view>
+</view>
+<view class='tonglans'>
+  <view class='tonglaner'>
+    <view class='lefter'>已支付</view>
+    <view class='righter'>{{listxq.y_pay}}</view>
+  </view>
+  <view class='tonglaner'>
+    <view class='lefter'>待支付</view>
+    <view class='righter'>{{listxq.dai_pay}}</view>
+  </view>
+</view>
+<!-- <view class='tonglans'>
+  <view class='botdd'>
+    <view class='top'>
+      预约下单
+    </view>
+    <view class='bottom'>
+      预约下单预约下单
+    </view>
+  </view>
+</view> -->
+<!-- <view class='tonglans'>
+  <view class='botdd'>
+    <view class='top'>
+      预约下单
+    </view>
+    <view class='bottom'>
+      预约下单预约下单
+    </view>
+  </view>
+</view> -->
+<button class='botcall' open-type="contact" session-from="weapp">客服</button>

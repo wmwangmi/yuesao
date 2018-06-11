@@ -1,0 +1,368 @@
+<!--pages/tcjs/tcjs.wxml-->
+<view class='top'>
+  <view class='son {{selector==0?"select":""}}' data-selnm='0'  bindtap='changesel'>月嫂</view>
+  <view class='son {{selector==1?"select":""}}' data-selnm='1' bindtap='changesel'>育婴师</view>
+  <view class='son {{selector==2?"select":""}}' data-selnm='2' bindtap='changesel'>催乳师</view>
+</view>
+
+<block wx:if='{{selector==0}}'>
+  <view class='fwtong'>
+    <view class='titd'>服务介绍</view>
+    <view class='jsdest'>
+      {{yuesao.fw_js_content}}
+    </view>
+  </view>
+  <view class='fwtong'>
+    <view class='titd'>服务介绍</view>
+    <view class='titx'><text>产妇护理</text></view>
+    <view class='fenkuai1'>
+      <view class='son'>
+        <text class='tt'>生活护理</text>
+        保持屋内空气清新,协助大小便，清洗产妇衣物，产妇不能自理时帮助产妇擦洗身体，协助产妇饮食；
+      </view>
+      <view class='son'>
+        <text class='tt'>病情观察</text>
+        阴道出血量、子宫收缩情况、生命体征；
+      </view>
+      <view class='son'>
+        <text class='tt'>乳房护理</text>
+        帮助产妇清理、热敷、按摩乳房，减轻乳房胀痛，指导并协助产妇正确的哺乳，保证乳汁充足；避免发生乳腺炎
+      </view>
+      <view class='son'>
+        <text class='tt'>产后恢复</text>
+        为恢复盆底肌力，指导产妇做好产后恢复操；
+      </view>
+      <view class='son'>
+        <text class='tt'>膳食营养</text>
+        合理安排产妇饮食；制作月子餐
+      </view>
+      <view class='son'>
+        <text class='tt'>心理疏导</text>
+        与产妇语言沟通，交流护理宝宝心得；
+      </view>
+    </view>
+    <view class='titx'><text>宝宝护理</text></view>
+    <view class='fenkuai2'>
+      <view class='son'>
+        <text class='tt'>生活护理</text>
+        环境、衣物、喂养、洗澡、臀部护理；
+      </view>
+      <view class='son'>
+        <text class='tt'>健康成长护理</text>
+        肚脐消毒、尿布、毛巾、奶瓶的清洗及消毒，二便、皮肤、黄疸、体温、呼吸的观察；
+      </view>
+      <view class='son'>
+        <text class='tt'>常见病护理</text>
+        预防湿疹、呼吸道感染、脐炎、腹泻、尿布疹、脓包疮等常见病的发生，发现异常及时提醒并协助治疗；
+      </view>
+      <view class='son'>
+        <text class='tt'>早期潜能开发</text>
+        给宝宝做抚摸、游泳和婴儿操；训练宝宝的视觉、听觉、触觉、温度觉；指导宝宝适应社会；
+      </view>
+    </view>
+  </view>
+
+  <view class='fwtong'>
+    <view class='titd'>月嫂级别</view>
+    <view class='fenkuai2'>
+      <view class='son' wx:for='{{yuesao.fw_js_list}}' wx:key='index'>
+        <view class='xjprice'>
+          <view class='left'>{{item.level}}</view>
+          <view class='right'>￥{{item.ys_price}}</view>
+        </view>
+        <view class='xjlog'>
+          <view class='left'><image mode='widthFix' src='https://www.bodylive.cn/images/iconxj1.png' /></view>
+          <view class='right'>
+            <view>经验：{{item.year_n}}</view>
+            <view>服务：{{item.fw_time}}（短单）</view>
+          </view>
+        </view>
+        服务内容：{{item.fw_content}}
+      </view>
+      <view class='son'>
+        <view class='xjprice'>
+          <view class='left'>二星月嫂</view>
+          <view class='right'>￥7800</view>
+        </view>
+        <view class='xjlog'>
+          <view class='left'><image mode='widthFix' src='https://www.bodylive.cn/images/iconxj2.png' /></view>
+          <view class='right'>
+            <view>经验：3个月</view>
+            <view>服务：3+（短单）</view>
+          </view>
+        </view>
+        服务内容：新生儿母乳喂养、配奶、奶瓶清洗、蒸汽消毒；新生儿打包抱放、臀部清洗、拍个、洗澡、穿脱衣服 ；宝宝衣服清洁消毒；测量体温、换衣服、喂水、喂食、夫妻床、衣物清洁；协助母乳喂养；月子餐：家常菜
+      </view>
+      <view class='son'>
+        <view class='xjprice'>
+          <view class='left'>二星月嫂</view>
+          <view class='right'>￥7800</view>
+        </view>
+        <view class='xjlog'>
+          <view class='left'><image mode='widthFix' src='https://www.bodylive.cn/images/iconxj3.png' /></view>
+          <view class='right'>
+            <view>经验：3个月</view>
+            <view>服务：3+（短单）</view>
+          </view>
+        </view>
+        服务内容：新生儿母乳喂养、配奶、奶瓶清洗、蒸汽消毒；新生儿打包抱放、臀部清洗、拍个、洗澡、穿脱衣服 ；宝宝衣服清洁消毒；测量体温、换衣服、喂水、喂食、夫妻床、衣物清洁；协助母乳喂养；月子餐：家常菜
+      </view><view class='son'>
+        <view class='xjprice'>
+          <view class='left'>二星月嫂</view>
+          <view class='right'>￥7800</view>
+        </view>
+        <view class='xjlog'>
+          <view class='left'><image mode='widthFix' src='https://www.bodylive.cn/images/iconxj4.png' /></view>
+          <view class='right'>
+            <view>经验：3个月</view>
+            <view>服务：3+（短单）</view>
+          </view>
+        </view>
+        服务内容：新生儿母乳喂养、配奶、奶瓶清洗、蒸汽消毒；新生儿打包抱放、臀部清洗、拍个、洗澡、穿脱衣服 ；宝宝衣服清洁消毒；测量体温、换衣服、喂水、喂食、夫妻床、衣物清洁；协助母乳喂养；月子餐：家常菜
+      </view>
+      <view class='son'>
+        <view class='xjprice'>
+          <view class='left'>二星月嫂</view>
+          <view class='right'>￥7800</view>
+        </view>
+        <view class='xjlog'>
+          <view class='left'><image mode='widthFix' src='https://www.bodylive.cn/images/iconxj5.png' /></view>
+          <view class='right'>
+            <view>经验：3个月</view>
+            <view>服务：3+（短单）</view>
+          </view>
+        </view>
+        服务内容：新生儿母乳喂养、配奶、奶瓶清洗、蒸汽消毒；新生儿打包抱放、臀部清洗、拍个、洗澡、穿脱衣服 ；宝宝衣服清洁消毒；测量体温、换衣服、喂水、喂食、夫妻床、衣物清洁；协助母乳喂养；月子餐：家常菜
+      </view><view class='son'>
+        <view class='xjprice'>
+          <view class='left'>二星月嫂</view>
+          <view class='right'>￥7800</view>
+        </view>
+        <view class='xjlog'>
+          <view class='left'><image mode='widthFix' src='https://www.bodylive.cn/images/iconxj6.png' /></view>
+          <view class='right'>
+            <view>经验：3个月</view>
+            <view>服务：3+（短单）</view>
+          </view>
+        </view>
+        服务内容：新生儿母乳喂养、配奶、奶瓶清洗、蒸汽消毒；新生儿打包抱放、臀部清洗、拍个、洗澡、穿脱衣服 ；宝宝衣服清洁消毒；测量体温、换衣服、喂水、喂食、夫妻床、衣物清洁；协助母乳喂养；月子餐：家常菜
+      </view>
+      <view class='son'>
+        <view class='xjprice'>
+          <view class='left'>二星月嫂</view>
+          <view class='right'>￥7800</view>
+        </view>
+        <view class='xjlog'>
+          <view class='left'><image mode='widthFix' src='https://www.bodylive.cn/images/iconxj7.png' /></view>
+          <view class='right'>
+            <view>经验：3个月</view>
+            <view>服务：3+（短单）</view>
+          </view>
+        </view>
+        服务内容：新生儿母乳喂养、配奶、奶瓶清洗、蒸汽消毒；新生儿打包抱放、臀部清洗、拍个、洗澡、穿脱衣服 ；宝宝衣服清洁消毒；测量体温、换衣服、喂水、喂食、夫妻床、衣物清洁；协助母乳喂养；月子餐：家常菜
+      </view>
+    </view>
+  </view>
+</block>
+
+<block wx:if='{{selector==1}}'>
+  <view class='fwtong'>
+    <view class='titd'>服务介绍</view>
+    <view class='jsdest'>
+     {{yuying.fw_js_content}}
+    </view>
+  </view>
+  <view class='fwtong'>
+    <view class='titd'>服务项目</view>
+    <view class='yyfw'>
+      <view class='yyson'>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw1.jpg' />
+        <text>科学喂养</text>
+      </view>
+      <view class='yyson'>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw2.jpg' />
+        <text>二便培养</text>
+      </view>
+      <view class='yyson'>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw3.jpg' />
+        <text>四浴护理</text>
+      </view>
+      <view class='yyson'>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw4.jpg' />
+        <text>动作技能训练</text>
+      </view>
+      <view class='yyson'>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw5.jpg' />
+        <text>语言表达能力训练</text>
+      </view>
+      <view class='yyson'>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw6.jpg' />
+        <text>社会行为训练</text>
+      </view>
+      <view class='yyson'>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw7.jpg' />
+        <text>婴幼儿感官刺激</text>
+      </view>
+      <view class='yyson'>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw8.jpg' />
+        <text>生活技能训练</text>
+      </view>
+      <view class='yyson'>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw9.jpg' />
+        <text>安全意识训练</text>
+      </view>
+    </view>
+  </view>
+  <view class='fwtong'>
+    <view class='titd'>服务价位</view>
+    <view class='fwjw'>
+      <view class='tr1'>
+        <view class='son'>星级</view>
+        <view class='son'>平台服务费</view>
+        <view class='son'>保险</view>
+        <view class='son'>育婴师服务费</view>
+      </view>
+      <view class='tr2' wx:for='{{yuying.yylist}}' wx:key='index'>
+        <view class='son'>{{item.level}}育婴师</view>
+        <view class='son'>{{item.pt_fw_price}}/年</view>
+        <view class='son'>{{item.baoxian}}/年</view>
+        <view class='son'>{{item.yy_fw_price}}/年</view>
+      </view>
+    </view>
+  </view>
+</block>
+
+<block wx:if='{{selector==2}}'>
+  <view class='fwtong'>
+    <view class='titd'>服务介绍</view>
+    <view class='jsdest'>
+      {{cuiru.fw_js_content}}
+    </view>
+  </view>
+  <view class='fwtong'>
+    <view class='titd'>服务项目</view>
+    <view class='yyfw'>
+      <view class='yyson'>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw1.jpg' />
+        <text>科学喂养</text>
+        <view class='context'>
+          家家育婴师是专业照料、护理和教育0-3岁婴幼儿的工作者。家家育婴师根据专家养育方案，提供婴儿营养膳食、习惯培养、动作技能训练、语言表达能力锻炼、社会行为培养、艺术感受性等8项一对一的养护工作。
+        </view>
+      </view>
+      <view class='yyson'>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw2.jpg' />
+        <text>二便培养</text>
+        <view class='context'>
+          家家育婴师是专业照料、家家育婴师根据专家养育方案，提供婴儿营养膳食、习惯培养、动作技能训练、语言表达能力锻炼、社会行为培养、艺术感受性等8项一对一的养护工作。
+        </view>
+      </view>
+      <view class='yyson'>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw3.jpg' />
+        <text>四浴护理</text>
+        <view class='context'>
+          家家育婴师是专业照料、护理和教育0-3岁婴幼儿的工作者。家家育婴师根据专家养育方案，提供婴儿营养膳食、习惯培养、艺术感受性等8项一对一的养护工作。
+        </view>
+      </view>
+      <view class='yyson'>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw3.jpg' />
+        <text>四浴护理</text>
+        <view class='context'>
+          家家育婴师是专业照料、护理和教育0-3岁婴幼儿的工作者。家家育婴师根据专家养育方案，提供婴儿营养膳食、习惯培养、艺术感受性等8项一对一的养护工作。
+        </view>
+      </view>
+      <view class='yyson'>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw3.jpg' />
+        <text>四浴护理</text>
+        <view class='context'>
+          家家育婴师是专业照料、护理和教育0-3岁婴幼儿的工作者。家家育婴师根据专家养育方案，提供婴儿营养膳食、习惯培养、艺术感受性等8项一对一的养护工作。
+        </view>
+      </view>
+      <view class='yyson'>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw3.jpg' />
+        <text>四浴护理</text>
+        <view class='context'>
+          家家育婴师是专业照料、护理和教育0-3岁婴幼儿的工作者。家家育婴师根据专家养育方案，提供婴儿营养膳食、习惯培养、艺术感受性等8项一对一的养护工作。
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='fwtong'>
+    <view class='titd'>服务价位</view>
+    <view class='crsjw'>
+      <view class='sonc tt'>催乳师<text>等级</text></view>
+      <view class='sonc tt'>单次通乳<text>服务套餐</text></view>
+      <view class='sonc tt'>五次通乳<text>服务套餐</text></view>
+      <view class='sonc tt'>十次通乳<text>服务套餐</text></view>
+      <block wx:for='{{cuiru.crlist}}' wx:key='index'>
+        <view class='sonc'>{{item.level}}</view>
+        <view class='sonc addbg'>{{item.cr_price_1}}元</view>
+        <view class='sonc addbg'>{{item.cr_price_5}}元</view>
+        <view class='sonc addbg'>{{item.cr_price_10}}元</view>
+      </block>
+    </view>
+  </view>
+  <view class='fwtong'>
+    <view class='titd'>服务反馈</view>
+    <scroll-view class="scroll-view_H" scroll-x="true" style=" white-space: nowrap; display: flex">
+      <image mode='widthFix' class='fk' src='https://www.bodylive.cn/images/fk.jpg' />
+      <image mode='widthFix' class='fk' src='https://www.bodylive.cn/images/fk.jpg' />
+      <image mode='widthFix' class='fk' src='https://www.bodylive.cn/images/fk.jpg' />
+      <image mode='widthFix' class='fk' src='https://www.bodylive.cn/images/fk.jpg' />
+    </scroll-view>
+  </view>
+</block>
+
+<view class='fwtong'>
+  <view class='titd'>服务流程</view>
+  <view class='liuchengdiv'>
+    <view class='soner'>
+      <view class='imgdiv'>
+        <image mode='widthFix' src='https://www.bodylive.cn/images/lc1.png' />
+      </view>
+      <text>访问平台</text>
+    </view>
+    <view class='soner'>
+      <view class='imgdiv'>
+        <image mode='widthFix' src='https://www.bodylive.cn/images/lc2.png' />
+      </view>
+      <text>挑选月嫂</text>
+    </view>
+    <view class='soner'>
+      <view class='imgdiv'>
+        <image mode='widthFix' src='https://www.bodylive.cn/images/lc3.png' />
+      </view>
+      <text>在线签约</text>
+    </view>
+    <view class='soner'>
+      <view class='imgdiv'>
+        <image mode='widthFix' src='https://www.bodylive.cn/images/lc4.png' />
+      </view>
+      <text>线上支付</text>
+    </view>
+    <view class='soner'>
+      <view class='imgdiv'>
+        <image mode='widthFix' src='https://www.bodylive.cn/images/lc5.png' />
+      </view>
+      <text>月嫂上门</text>
+    </view>
+    <view class='soner'>
+      <view class='imgdiv'>
+        <image mode='widthFix' src='https://www.bodylive.cn/images/lc6.png' />
+      </view>
+      <text>服务关怀</text>
+    </view>
+    <view class='soner'>
+      <view class='imgdiv'>
+        <image mode='widthFix' src='https://www.bodylive.cn/images/lc7.png' />
+      </view>
+      <text>服务结束</text>
+    </view>
+    <view class='soner'>
+      <view class='imgdiv'>
+        <image mode='widthFix' src='https://www.bodylive.cn/images/lc8.png' />
+      </view>
+      <text>母婴顾问</text>
+    </view>
+  </view>
+</view>
+

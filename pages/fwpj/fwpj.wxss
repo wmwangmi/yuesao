@@ -1,0 +1,173 @@
+/* pages/fwpj/fwpj.wxss */
+@import '../../static/default.wxss';
+page{
+  padding-bottom:100rpx;
+  background:#fff;
+}
+.topiden {
+  width:100%;
+  height:250rpx;
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  background:#fff;
+  border-bottom:1px solid #e3e3e3;
+}
+.topiden .left{
+  flex:3;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+.topiden .right{
+  flex:7;
+  text-align: left;
+  padding-left:20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+.topiden .left image{
+  width:80%;
+  border-radius:100%;
+  align-self: center;
+}
+.topiden .right .tt{
+  color:#000;
+  font-size:35rpx;
+  min-width: 100%;
+  margin-bottom:20rpx;
+}
+.topiden .right .name{
+  color:#868686;
+  font-size:25rpx;
+  min-width: 100%;
+}
+.zhepf{
+  width:100%;
+  height:120rpx;
+  line-height:120rpx;
+  color:#000;
+  font-size:30rpx;
+  text-align: center;
+}
+.flexdiv1{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: row nowrap;
+}
+.daxin{
+  width:80%;
+  height:120rpx;
+  margin:0 auto;
+}
+.daxin image{
+  width:10%;
+  margin:0 20rpx;
+}
+.fenpj{
+  width:70%;
+  height:50rpx;
+  line-height:50rpx;
+  margin:20rpx auto;
+}
+.fenpj .left{
+  flex:2;
+  font-size:25rpx;
+}
+.fenpj .right{
+  flex:7;
+}
+.fenpj .right image{
+  width:10%;
+  flex:1;
+  margin:0 20rpx;
+  margin-top:5rpx;
+  align-self: center;
+}
+textarea{
+  border:1px solid #ddd;
+  width:90%;
+  height:200rpx;
+  margin:20rpx auto;
+  padding:20rpx;
+  box-sizing: border-box;
+  font-size:25rpx;
+}
+.teclass{
+  color:#ddd;
+  font-size:25rpx;
+}
+.tjtupian{
+  width:90%;
+  height:60rpx;
+  line-height:60rpx;
+  margin:0 auto;
+  font-size:25rpx;
+  text-align: left;
+  color:#7e7e7e;
+}
+.tjtupian text{
+  color:#ddd;
+}
+.addphto{
+  width:120rpx;
+  height:120rpx;
+  border:1px solid #ddd;
+  line-height: 0;
+  position: relative;
+  margin-left:5%;
+}
+.addphto::after{
+  content: '+';
+  font-size:100rpx;
+  padding:0;
+  color:#ddd;
+  position: absolute;
+  left:50%;
+  top:45%;
+  transform: translate(-50%,-50%);
+}
+.tongbu{
+  width:90%;
+  height:50rpx;
+  line-height:50rpx;
+  margin:0 auto;
+  color:#757575;
+  position: relative;
+  font-size:25rpx;
+  text-indent:2em;
+  margin-top:30rpx;
+}
+.tongbu::after,.tongbu.select::before{
+  content: ' ';
+  position: absolute;
+  width:30rpx;
+  height:30rpx;
+  border-radius:100%;
+  border:1px solid #d1d1d1;
+  left:0;
+  top:50%;
+  transform: translateY(-50%);
+}
+.tongbu.select::before{
+  width:20rpx;
+  height:20rpx;
+  background:#3CC51F;
+  left:5rpx;
+}
+.tjbar{
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+  background:#3CC51F;
+  text-align: center;
+  color:#fff;
+  font-size:30rpx;
+  position: fixed;
+  left:0;
+  bottom: 0;
+}

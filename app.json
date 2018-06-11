@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/searchys/searchys",
+    "pages/ysdetail/ysdetail",
+    "pages/getdate/getdate",
+    "pages/auth/auth",
+    "pages/workfc/workfc",
+    "pages/fwnr/fwnr",
+    "pages/tcjs/tcjs",
+    "pages/aboutas/aboutas",
+    "pages/dingdan/dingdan",
+    "pages/ddxqing/ddxqing",
+    "pages/xdan/xdan",
+    "pages/mydd/mydd",
+    "pages/fwpj/fwpj",
+    "pages/surepay/surepay",
+    "pages/paysuccuss/paysuccuss",
+    "pages/login/login",
+    "pages/template/xin",
+    "pages/template/default",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3CC51F",
+    "navigationBarTitleText": "云微家政",
+    "navigationBarTextStyle": "#fff"
+  }
+}

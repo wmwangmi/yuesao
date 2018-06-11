@@ -1,0 +1,5 @@
+/* pages/template/xin.wxss */
+.xinxin{
+  width:25rpx;
+  margin-right:10rpx;
+}

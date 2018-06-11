@@ -1,0 +1,70 @@
+<!--index.wxml-->
+<swiper class='index-swiper' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item bindtap='goabout'>
+      <image data-link='{{item.link}}' bindtap='bango' src="{{app.originurl}}{{item.img}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='yuesaoiconls'>
+  <view class='icondiv' bindtap="gojump" wx:for='{{navibars}}' wx:key='index' data-ind='{{index}}' data-jump='{{item.url}}'>
+    <image mode='widthFix' style='background:{{item.bj_color}}' src='{{app.allconfig.originurl}}{{item.nav_img}}' />
+    <text>{{item.name}}</text>
+  </view>
+</view>
+<view class='searchys' bindtap='gosearchys'>
+  <view class='top'>
+    帮您找月嫂
+    <image mode='widthFix' src='https://www.bodylive.cn/images/rightarr.png' />
+  </view>
+  <view class='centerimg'>
+    <image mode='widthFix' data-link='{{bigimg.link}}' bindtap='bango' src='{{app.originurl}}{{bigimg.img}}' />
+    <view class='shangbiao'><text>HOT</text></view>
+    <view class='textdiv1'>
+      <view class='left'>26天住家月子服务</view>
+      <view class='right'>{{bigimg.price}}<text>元/26元天起</text></view>
+    </view>
+    <view class='textdiv1 color'>
+      {{bigimg.title}}
+    </view>
+  </view>
+</view>
+<view class='mianshidiv'>
+  <view class='title'>
+     <view class='left'>
+       免费面试月嫂
+     </view>
+     <view class='right'>
+       已经{{gdtt.count}}个人申请了面试月嫂
+     </view>
+  </view>
+  <view class='title textadd'>
+    <image mode='widthFix' src='https://www.bodylive.cn/images/laba.png' /> 
+    <view animation="{{animationData}}">
+      <text wx:for='{{news}}' wx:key='{{index}}'>{{item}}</text>
+    </view>
+  </view>
+  <view class='inputview'>
+    <view class='left'>姓名</view>
+    <view class='right'><input data-type='xming' value='{{name}}' bindblur='getinputval' placeholder='请输入您的姓名' /></view>
+  </view>
+  <view class='inputview'>
+    <view class='left'>手机号码</view>
+    <view class='right'><input data-type='phone' maxlength='11' value='{{phone}}' bindblur='getinputval' placeholder='请输入您的手机号' /></view>
+  </view>
+  <view class='inputview'>
+    <view class='left'>预产期</view>
+    <view class='right'>
+      <picker mode="date" value="{{date}}" start="{{started}}" end="{{endd}}" bindchange="bindDateChange">
+        <view class="picker">
+          {{date}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <button bindtap='msfn'>免费面试月嫂</button>
+  <view class='chengnuotext'>
+    我们承诺：<b>提供该项服务，绝不收取任何费用</b>,您的隐私将会被严格保密
+  </view>
+</view>

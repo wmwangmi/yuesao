@@ -1,0 +1,207 @@
+/* pages/dingdan/dingdan.wxss */
+@import '../../static/default.wxss';
+page{
+  padding-bottom:100rpx;
+}
+
+.conk:first-child{
+  border-top:0;
+}
+
+.conk .line .right .inpu{
+  color:#8e8e8e;
+}
+.conk .line .right input{
+  width:100%;
+  height:100%;
+}
+.conk .line .right.addarrow::after{
+  content: ' ';
+  width:15rpx;
+  height:15rpx;
+  border-right:7rpx solid #cbcacf;
+  border-bottom:7rpx solid #cbcacf;
+  position: absolute;
+  right:20rpx;
+  top:50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+.conk .line .right .tye{
+  width:70%;
+  height:100%;
+  float:left;
+}
+.conk .line .right .tye input{
+  height:100%;
+}
+.conk .line .right .but{
+  width:30%;
+  height:100%;
+  color:#fff;
+  background:#3CC51F;
+  float:right;
+  font-size:25rpx;
+  text-align: center;
+}
+.title{
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+  padding:0 20rpx;
+  box-sizing: border-box;
+  font-size:30rpx;
+}
+.flexdib{
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+}
+.tabor{
+  flex:1;
+  margin:10rpx 15rpx;
+  text-align: center;
+  color:#000;
+  font-size:25rpx;
+  border:3rpx solid #3CC51F;
+  min-width:110rpx;
+  max-width:110rpx;
+  padding:15rpx 0;
+  align-self: flex-start;
+}
+.tabor.select{
+  background:#3CC51F;
+  color:#fff;
+}
+
+.title .left{
+  flex:6;
+}
+.title .right{
+  flex:4;
+  text-align: right;
+}
+.wxts{
+  width:100%;
+  height:auto;
+  overflow:hidden;
+  padding:20rpx;
+  box-sizing: border-box;
+  color:#f00;
+  font-size:25rpx;
+  text-align: left;
+  line-height:35rpx;
+}
+.wxts text{
+  color:#202020;
+}
+.addbob{
+  border-bottom:1px solid #d6d6d6;
+}
+textarea.addsty{
+  color:#828282;
+}
+textarea {
+  width:100%;
+  height:250rpx;
+  line-height: 35rpx;
+  font-size:30rpx;
+  padding:20rpx;
+  box-sizing: border-box;
+}
+.zishu{
+  width: 100%;
+  height:50rpx;
+  line-height: 50rpx;
+  color:#b5b5b5;
+  font-size:25rpx;
+  text-align: right;
+  padding:0 20rpx;
+  box-sizing: border-box;
+}
+.tiaoyue{
+  width:100%;
+  height:50rpx;
+  line-height:50rpx;
+  color:#919191;
+  font-size:25rpx;
+  position: relative;
+  text-align: left;
+  text-indent:5em;
+}
+.tiaoyue text{
+  color:#3CC51F;
+}
+.tiaoyue::after,.tiaoyue::before{
+  content: ' ';
+  width:50rpx;
+  height:50rpx;
+  position: absolute;
+  border:1px solid #d2d2d2;
+  border-radius:5rpx;
+  background:#fff;
+  left:10rpx;
+  top:50%;
+  transform: translateY(-50%);
+}
+.tiaoyue::before{
+  width:15rpx;
+  height:30rpx;
+  border:0;
+  border-radius:0;
+  background:none;
+  border-right:6rpx solid #3CC51F;
+  border-bottom:6rpx solid #3CC51F;
+  transform: translateY(-50%) rotate(45deg);
+  z-index:1;
+  left:28rpx;
+  top:45%;
+}
+
+.topkuang{
+  width:100%;
+  height:auto;
+  overflow: hidden;
+  padding-bottom:10px;
+  margin-bottom:10px;
+  border-bottom:1px solid #dbdbdb;
+  background:#fff;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.topkuang .left{
+  flex:3;
+  text-align: center;
+}
+.topkuang .right{
+  flex:7;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.topkuang .left image{
+  width:80%;
+  margin:10px auto;
+  margin-bottom:0;
+  border:1px solid #e8a229;
+  border-radius:100%;
+}
+.topkuang .left text{
+  display: block;
+  text-align: center;
+  font-size:25rpx;
+  color:#eca322;
+}
+.topkuang .right .name{
+  margin-bottom:50rpx;
+  font-size:35rpx;
+  color:#0f0f0f;
+}
+.topkuang .right .biaoji text{
+  font-size:35rpx;
+  color:#0f0f0f;
+}
+.topkuang .right .biaoji{
+  font-size:25rpx;
+  color:#898989;
+}

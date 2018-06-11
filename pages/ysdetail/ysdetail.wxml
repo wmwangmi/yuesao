@@ -1,0 +1,125 @@
+<!--pages/ysdetail/ysdetail.wxml-->
+<import src="../template/xin.wxml" />
+<view class='detBan'>
+  <view class='context'>
+      <view class='name'>
+        {{identxx.goods_name}}
+      </view>
+      <view class='xingji'>
+        {{identxx.spu}}
+      </view>
+      <view class='iconimage'>
+        <!-- <image class='img' mode='widthFix' src='https://www.bodylive.cn/images/yuesaobz.png' /> -->
+      </view>
+      <view class='desage'>
+        {{identxx.sku}}
+        {{identxx.age}}
+      </view>
+      <view class='payfor'>
+        <text class='fontcol'>￥{{identxx.shop_price}}</text>/26天
+      </view>
+  </view>
+  <image class='phto' mode='widthFix' src='{{app.allconfig.originurl}}{{item.original_img}}' />
+</view>
+<view class='tongtit'>
+  <view class='left'>
+     雇主评分
+  </view>
+  <view class='right'>
+     <template is='xinxin' data='{{...identxx}}'></template>
+     {{identxx.p_fen}}分
+  </view>
+</view>
+<view class='tongtit2'>
+  护理经验 <text class='fontcol'>{{identxx.weight}}</text> 服务家庭个数 <text class='fontcol'>{{identxx.volume}}</text> 培训课时 <text class='fontcol'>{{identxx.store_count}}</text>
+</view>
+<view class='tongtit' bindtap='goauth'>
+  <view class='left'>
+     认证信息
+  </view>
+  <view class='right aftercla'>
+  </view>
+</view>
+<view class='tongtit3 styl1'>
+  <text class='bqian' wx:for='{{zheng}}' wx:key='{{index}}'>{{item}}</text>
+  <view class='desc'>
+    奥杰，喜欢宝宝而选择这个职业，哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+  </view>
+  <view class='biaoq'>
+    <view class='bq fontcol' wx:for='{{biaoqian}}' wx:key='index'>{{item}}</view>
+  </view>
+</view>
+
+<!-- <view class='tongtit mart' bindtap='goworkfc'>
+  <view class='left'>
+     工作风采
+  </view>
+  <view class='right aftercla'>
+  </view>
+</view>
+<view class='tongtit3 fengcaidiv styl1'>
+  <image mode='widthFix' wx:for='{{fengcaiimg}}' wx:key='index' src='{{item}}' />
+</view> -->
+
+<view class='tongtit mart addbotbor' bindtap='YSmts'>
+  <view class='left'>
+     月嫂档期
+  </view>
+  <view class='right aftercla addstyl fontcol'>
+     最近一年
+  </view>
+</view>
+
+<view class='tongtit mart' bindtap='gofwnr'>
+  <view class='left'>
+     服务内容
+  </view>
+  <view class='right aftercla addstyl fontcol'>
+     查看更多
+  </view>
+</view>
+<view class='tongtit3 fengcaidiv styl1'>
+  <view class='fwimg' wx:for='{{fwimgs}}' wx:key='index'>
+    <image mode='widthFix' class='imger' src='{{item.imgsrc}}' />
+    <text>{{item.tet}}</text>
+  </view>
+</view>
+
+<view class='tongtit mart'>
+  <view class='left'>
+     用户评价（{{pjdata.pj_count}}）
+  </view>
+  <view class='right addstyl2'>
+     综合评价
+    <template is='xinxin'></template>
+     {{pjdata.p_all_fen}}分
+  </view>
+</view>
+<view class='tongtit3 fengcaidiv styl2'>
+  <view class='pingjtl'>宝宝护理 <template is='xinxin'  data='{{...pjdata}}'></template> {{pjdata.p_all_fen}}分</view>
+  <view class='pingjtl'>宝宝早教 <template is='xinxin'  data='{{...pjdata}}'></template>  {{pjdata.p_all_fen}}分</view>
+  <view class='pingjtl'>膳食搭配 <template is='xinxin'  data='{{...pjdata}}'></template>  {{pjdata.p_all_fen}}分</view>
+  <view class='pingjtl'>科学喂养 <template is='xinxin'  data='{{...pjdata}}'></template>  {{pjdata.p_all_fen}}分</view>
+  <view class='pingjtl'>产妇护理 <template is='xinxin'  data='{{...pjdata}}'></template>  {{pjdata.p_all_fen}}分</view>
+  <view class='pingjtl'>沟通技巧 <template is='xinxin'  data='{{...pjdata}}'></template>  {{pjdata.p_all_fen}}分</view>
+</view>
+<view class='pingjiadiv' wx:for='{{pjdata.pjlist}}' wx:key='index'>
+  <view class='left'>
+    <image mode='widthFix' src='{{item.photo}}' />
+  </view>
+  <view class='right'>
+    <view class='top'>{{item.name}} <template is='xinxin'></template> {{item.p_fen}}分    服务<text class='fontcol'>{{item.days}}</text> <text class='dateclass'>{{item.date}}</text></view>
+    <view class='desc'>
+      {{item.p_jia_content}}
+    </view>
+  </view>
+</view>
+<view class='dibu'>
+  <view class='left' bindtap='showxx'>
+    <image wx:if='{{!xguanzhu}}' mode='widthFix' src='https://www.bodylive.cn/images/guanzhu.png' />
+    <image wx:if='{{xguanzhu}}' mode='widthFix' src='https://www.bodylive.cn/images/guanzhu2.png' />
+    关注
+  </view>
+  <view class='right' bindtap='callfor'>立即预约</view>
+</view>
+

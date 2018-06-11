@@ -1,0 +1,6 @@
+<!--pages/paysuccuss/paysuccuss.wxml-->
+<view class='icondiv'></view>
+<view class='zhifutx'>支付成功</view>
+<view class='tx'>您已购买26天月嫂服务，请在服务结束后进行评价</view>
+<view class='but t1' bindtap='gohome'>返回首页</view>
+<view class='but t2' bindtap='golist'>查看订单</view>

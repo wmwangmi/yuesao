@@ -1,0 +1,97 @@
+<!--pages/dingdan/dingdan.wxml-->
+<view class='topkuang'>
+  <view class='left'>
+    <image mode='widthFix' src='https://www.bodylive.cn/public/upload/goods/2018/06-06/563eff0d1799c27edf3d5a947fcfa5dc.png' />
+    <text>{{ysspu}}</text>
+  </view>
+  <view class='right'>
+    <view class='name'>{{nameer}}</view>
+    <view class='biaoji'>服务项目:<text>住家月子服务</text></view>
+  </view>
+</view>
+
+<view class='conk'>
+  <view class='line'>
+    <view class='left'>联系人</view>
+    <view class='right'><input data-inpname='consignee' bindblur='ongetval' value='{{consignee}}' placeholder-class='inpu' placeholder='请输入联系人姓名' /></view>
+  </view>
+  <view class='line'>
+    <view class='left'>手机号</view>
+    <view class='right'>{{mobile}}</view>
+  </view>
+  <!-- <view class='line'>
+    <view class='left'>服务地区</view>
+    <view class='right addarrow'>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          {{region[0]}}，{{region[1]}}，{{region[2]}}
+        </view>
+      </picker>
+    </view>
+  </view> -->
+  <view class='line'>
+    <view class='left'>服务地区</view>
+    <view class='right'>
+    <view class='tye'><input data-inpname='address' bindblur='ongetval' value='{{address}}' placeholder-class='inpu' placeholder='请输入服务地址' />
+    </view>
+    <view class='but' bindtap='getaddr'>获取定位</view></view>
+  </view>
+</view>
+
+<view class='conk'>
+  <view class='line'>
+    <view class='left'>预约时间</view>
+    <view class='right addarrow'>
+      <picker mode="date" value="{{order_time}}" start="{{startdata}}" end="{{enddata}}" bindchange="bindDateChange">
+        <view class="picker">
+          {{order_time}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='line'>
+    <view class='left'>服务天数</view>
+    <view class='right'>
+      <!-- <picker mode = 'selector' bindchange="bindPickerChange" value="{{fw_t_num}}" range="{{array}}"> -->
+        <view class="picker">
+          {{array[fw_t_num]}}
+        </view>
+      <!-- </picker> -->
+    </view>
+  </view>
+</view>
+<view class='conk'>
+  <view class='title'>月嫂价位</view>
+  <view class='flexdib'>
+    <view wx:for='{{xingarr}}' wx:key='index' class='tabor {{select==index?"select":""}}' data-ind='{{index}}' data-levelnum='{{item.levelnum}}'  bindtap='selxing'>{{item.level}}</view>
+  </view>
+</view>
+<view class='conk'>
+  <view class='title'>宝宝数量</view>
+  <view class='flexdib'>
+    <view wx:for='{{xingarr2}}' wx:key='index' class='tabor {{select2==index?"select":""}}' data-ind='{{index}}'  data-bb_num='{{item.bb_num}}'  bindtap='selxing2'>{{item.bb_type}}</view>
+  </view>
+</view>
+<view class='dtt'>
+服务费用
+</view>
+<view class='conk'>
+  <view class='title flexdib addbob'>
+    <view class='left'>住家月子服务26天</view><view class='right'>￥{{payfor}}</view>
+  </view>
+  <view class='wxts'>
+    <text>温馨提示：</text>
+    月子服务期间如遇国家法定节日（春节除外），需额外支付1倍工资，春节需额外支付2倍工资，请在月嫂开始服务当天另行支付。
+  </view>
+</view>
+<view class='conk'>
+  <view class='title addbob'>
+    备注
+  </view>
+  <textarea data-inpname='user_note' maxlength='200' bindinput='getzilen' bindblur='ongetval' placeholder='备注您中意的月嫂，现场的销售员姓名...'></textarea>
+  <view class='zishu'>{{zilen}}/{{maxzilen}}</view>
+</view>
+<view class='tiaoyue'>
+  阅读并同意<text>《云微家政服务协议》</text>
+</view>
+<view class='pushdd' bindtap='payaction'>提交订单</view>

@@ -1,0 +1,8 @@
+<!--pages/template/xin.wxml-->
+<template name='xinxin'>
+  <image class='xinxin' wx:if='{{p_fen>=1||p_all_fen>=1||pjlist.p_fen>=1}}'  mode='widthFix' src='https://www.bodylive.cn/images/xin.png' />
+  <image class='xinxin' wx:if='{{p_fen>=2||p_all_fen>=2||pjlist.p_fen>=2}}'  mode='widthFix' src='https://www.bodylive.cn/images/xin.png' />
+  <image class='xinxin' wx:if='{{p_fen>=3||p_all_fen>=3||pjlist.p_fen>=3}}'  mode='widthFix' src='https://www.bodylive.cn/images/xin.png' />
+  <image class='xinxin' wx:if='{{p_fen>=4||p_all_fen>=4||pjlist.p_fen>=4}}'  mode='widthFix' src='https://www.bodylive.cn/images/xin.png' />
+  <image class='xinxin' wx:if='{{p_fen>=5||p_all_fen>=5||pjlist.p_fen>=5}}'  mode='widthFix' src='https://www.bodylive.cn/images/xin.png' />
+</template>

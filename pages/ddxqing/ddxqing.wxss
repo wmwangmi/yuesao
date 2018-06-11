@@ -1,0 +1,103 @@
+/* pages/ddxqing/ddxqing.wxss */
+@import '../../static/default.wxss';
+page{
+  padding-bottom:110rpx;
+}
+.tonglans{
+  width:100%;
+  height:auto;
+  font-size:25rpx;
+  overflow: hidden;
+  background:#fff;
+  color:#313131;
+  border-top:1px solid #d9d9d9;
+  margin-bottom:20rpx;
+}
+.tonglans:nth-child(1){
+  border:0;
+}
+.tonglans .tonglaner{
+  width:100%;
+  height:95rpx;
+  line-height:95rpx;
+  padding:0 20rpx;
+  box-sizing: border-box;
+  border-bottom:1px solid #d9d9d9;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.tonglaner .lefter{
+  flex:4;
+}
+.tonglaner .righter{
+  flex:7;
+  color:#8c8c8c;
+  text-align: right;
+}
+.botdd{
+  width:90%;
+  height:auto;
+  padding:10px;
+  box-sizing: border-box;
+  overflow: visible;
+  margin:0 auto;
+  border-left:1px solid #d9d9d9;
+  position: relative;
+}
+.botdd::after{
+  content: ' ';
+  width:12px;
+  height:12px;
+  position: absolute;
+  background:#fff;
+  left:-7px;
+  top:-6px;
+  border:1px solid #d76cff;
+  border-radius: 100%;
+}
+.botdd::before{
+  content: ' ';
+  width:4px;
+  height:4px;
+  position: absolute;
+  left:-3px;
+  top:-2px;
+  border:1px solid #d76cff;
+  background:#d76cff;
+  border-radius: 100%;
+  z-index: 1;
+}
+.botdd:nth-child(1){
+  margin-top:10px;
+}
+.botdd:nth-child(2){
+  margin-bottom:10px;
+}
+.botdd .top{
+  width:100%;
+  height:60rpx;
+  line-height:60rpx;
+  text-align: left;
+  font-size:35rpx;
+}
+.botdd .bottom{
+  width:100%;
+  height:40rpx;
+  line-height:40rpx;
+  text-align: left;
+  font-size:25rpx;
+  color:#d9d9d9;
+}
+.botcall{
+  width:100%;
+  height:100rpx;
+  line-height:100rpx;
+  background:#fff;
+  position: fixed;
+  left:0;
+  bottom:0;
+  text-align: center;
+  color:#323232;
+  border-top:1px solid #d9d9d9;
+}

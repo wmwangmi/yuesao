@@ -1,0 +1,158 @@
+page{
+  background:#f8f8f8;
+}
+.fontcol{
+  color:#3CC51F;
+}
+image{
+  width:2rpx;
+  height:2rpx;
+}
+.jjie{
+  width:100%;
+  height:auto;
+  overflow:hidden;
+  box-sizing: border-box;
+  line-height:35rpx;
+  color:#6b6b6b;
+  font-size:25rpx;
+  text-align: left;
+  text-indent: 2em;
+  margin-bottom:10rpx;
+}
+.jjieimg{
+  width:100%;
+  height:auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  margin-top:20rpx;
+}
+.jjieimg image{
+  flex: 1;
+}
+.jjieimg image:nth-child(1){
+  margin-right:20rpx;
+}
+
+.yuesaodiv{
+  width:100%;
+  height:300rpx;
+  overflow:hidden;
+  padding:20rpx;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background:#fff;
+  border-bottom:1px solid #e5e5e5;
+  margin-bottom:30rpx;
+  display: flex;
+  -webkit-display:flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.yuesaodiv .left{
+  flex: 3;
+  position: relative;
+}
+.yuesaodiv .left .pinji{
+  width:100%;
+  height:auto;
+  text-align: center;
+}
+.yuesaodiv .left .pinji image{
+  width:20%;
+}
+.yuesaodiv .left .tx{
+  border-radius:100%;
+  width:80%;
+  height:auto;
+  border:1px solid #f6a21c;
+  overflow:hidden;
+  margin:0 auto;
+}
+.yuesaodiv .left .tx image{
+  width:100%;
+}
+.yuesaodiv .left .pinjitext{
+  text-align: center;
+  font-family: 'myFi';
+  font-size:26rpx;
+  color:#f6a21c;
+  padding-top:20rpx;
+}
+.yuesaodiv .right{
+  flex: 9;
+}
+.yuesaodiv .right .top{
+  width:100%;
+  height:45rpx;
+  line-height:45rpx;
+  font-size:25rpx;
+  color:#000;
+  display: flex;
+  -webkit-display:flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.yuesaodiv .right .top .name{
+  flex:2;
+}
+.yuesaodiv .right .top .ysbz{
+  flex:5;
+}
+
+.conk{
+  width:100%;
+  height:auto;
+  overflow:hidden;
+  background:#fff;
+  border-bottom:1px solid #d6d6d6;
+  border-top:1px solid #d6d6d6;
+  margin-bottom:20rpx;
+  color:#000;
+}
+
+.conk .line{
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+  font-size:30rpx;
+  padding:0 20rpx;
+  box-sizing: border-box;
+  border-bottom:1px solid #d6d6d6;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.conk .line:last-child{
+  border:0;
+}
+.conk .line .left{
+  flex:3;
+}
+.conk .line .right{
+  flex:7;
+  position: relative;
+}
+.dtt{
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+  text-align: left;
+  padding:0 20rpx;
+  color:#cecece;
+  font-size:25rpx;
+  margin-top:-20rpx;
+}
+.pushdd{
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+  background:#3CC51F;
+  color:#fff;
+  text-align: center;
+  position: fixed;
+  bottom:0;
+  left:0;
+  z-index: 1;
+}

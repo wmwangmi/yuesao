@@ -1,0 +1,22 @@
+<!--pages/login/login.wxml-->
+<view class='tishi'>
+  绑定手机后，您在家家月嫂微信端的数据将在其他本公司平台上共享。
+</view>
+<view class='inputdiv'>
+  <view class='son'>
+    <view class='left'>手机号</view>
+    <view class='right'>
+      <input value='{{phoneval}}' placeholder='请输入您的手机号' placeholder-class='plcla' maxlength='11' bindblur='phonevalfn' />
+    </view>
+  </view>
+  <view class='son'>
+    <view class='left'>验证码</view>
+    <view class='right'>
+      <view class='inputdiv'>
+        <input value='{{codeval}}' placeholder='请输入验证码' placeholder-class='plcla' maxlength='6' bindblur='codevalfn' />
+      </view>
+      <view class='button' bindtap='yzmfn'>{{yzm}}</view>
+    </view>
+  </view>
+</view>
+<view class='tjiao' bindtap='geton'>提交</view>
