@@ -79,88 +79,7 @@
         </view>
         服务内容：{{item.fw_content}}
       </view>
-      <view class='son'>
-        <view class='xjprice'>
-          <view class='left'>二星月嫂</view>
-          <view class='right'>￥7800</view>
-        </view>
-        <view class='xjlog'>
-          <view class='left'><image mode='widthFix' src='https://www.bodylive.cn/images/iconxj2.png' /></view>
-          <view class='right'>
-            <view>经验：3个月</view>
-            <view>服务：3+（短单）</view>
-          </view>
-        </view>
-        服务内容：新生儿母乳喂养、配奶、奶瓶清洗、蒸汽消毒；新生儿打包抱放、臀部清洗、拍个、洗澡、穿脱衣服 ；宝宝衣服清洁消毒；测量体温、换衣服、喂水、喂食、夫妻床、衣物清洁；协助母乳喂养；月子餐：家常菜
-      </view>
-      <view class='son'>
-        <view class='xjprice'>
-          <view class='left'>二星月嫂</view>
-          <view class='right'>￥7800</view>
-        </view>
-        <view class='xjlog'>
-          <view class='left'><image mode='widthFix' src='https://www.bodylive.cn/images/iconxj3.png' /></view>
-          <view class='right'>
-            <view>经验：3个月</view>
-            <view>服务：3+（短单）</view>
-          </view>
-        </view>
-        服务内容：新生儿母乳喂养、配奶、奶瓶清洗、蒸汽消毒；新生儿打包抱放、臀部清洗、拍个、洗澡、穿脱衣服 ；宝宝衣服清洁消毒；测量体温、换衣服、喂水、喂食、夫妻床、衣物清洁；协助母乳喂养；月子餐：家常菜
-      </view><view class='son'>
-        <view class='xjprice'>
-          <view class='left'>二星月嫂</view>
-          <view class='right'>￥7800</view>
-        </view>
-        <view class='xjlog'>
-          <view class='left'><image mode='widthFix' src='https://www.bodylive.cn/images/iconxj4.png' /></view>
-          <view class='right'>
-            <view>经验：3个月</view>
-            <view>服务：3+（短单）</view>
-          </view>
-        </view>
-        服务内容：新生儿母乳喂养、配奶、奶瓶清洗、蒸汽消毒；新生儿打包抱放、臀部清洗、拍个、洗澡、穿脱衣服 ；宝宝衣服清洁消毒；测量体温、换衣服、喂水、喂食、夫妻床、衣物清洁；协助母乳喂养；月子餐：家常菜
-      </view>
-      <view class='son'>
-        <view class='xjprice'>
-          <view class='left'>二星月嫂</view>
-          <view class='right'>￥7800</view>
-        </view>
-        <view class='xjlog'>
-          <view class='left'><image mode='widthFix' src='https://www.bodylive.cn/images/iconxj5.png' /></view>
-          <view class='right'>
-            <view>经验：3个月</view>
-            <view>服务：3+（短单）</view>
-          </view>
-        </view>
-        服务内容：新生儿母乳喂养、配奶、奶瓶清洗、蒸汽消毒；新生儿打包抱放、臀部清洗、拍个、洗澡、穿脱衣服 ；宝宝衣服清洁消毒；测量体温、换衣服、喂水、喂食、夫妻床、衣物清洁；协助母乳喂养；月子餐：家常菜
-      </view><view class='son'>
-        <view class='xjprice'>
-          <view class='left'>二星月嫂</view>
-          <view class='right'>￥7800</view>
-        </view>
-        <view class='xjlog'>
-          <view class='left'><image mode='widthFix' src='https://www.bodylive.cn/images/iconxj6.png' /></view>
-          <view class='right'>
-            <view>经验：3个月</view>
-            <view>服务：3+（短单）</view>
-          </view>
-        </view>
-        服务内容：新生儿母乳喂养、配奶、奶瓶清洗、蒸汽消毒；新生儿打包抱放、臀部清洗、拍个、洗澡、穿脱衣服 ；宝宝衣服清洁消毒；测量体温、换衣服、喂水、喂食、夫妻床、衣物清洁；协助母乳喂养；月子餐：家常菜
-      </view>
-      <view class='son'>
-        <view class='xjprice'>
-          <view class='left'>二星月嫂</view>
-          <view class='right'>￥7800</view>
-        </view>
-        <view class='xjlog'>
-          <view class='left'><image mode='widthFix' src='https://www.bodylive.cn/images/iconxj7.png' /></view>
-          <view class='right'>
-            <view>经验：3个月</view>
-            <view>服务：3+（短单）</view>
-          </view>
-        </view>
-        服务内容：新生儿母乳喂养、配奶、奶瓶清洗、蒸汽消毒；新生儿打包抱放、臀部清洗、拍个、洗澡、穿脱衣服 ；宝宝衣服清洁消毒；测量体温、换衣服、喂水、喂食、夫妻床、衣物清洁；协助母乳喂养；月子餐：家常菜
-      </view>
+      
     </view>
   </view>
 </block>
@@ -243,45 +162,45 @@
     <view class='titd'>服务项目</view>
     <view class='yyfw'>
       <view class='yyson'>
-        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw1.jpg' />
-        <text>科学喂养</text>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/cr1.jpg' />
+        <text>产后开奶</text>
         <view class='context'>
-          家家育婴师是专业照料、护理和教育0-3岁婴幼儿的工作者。家家育婴师根据专家养育方案，提供婴儿营养膳食、习惯培养、动作技能训练、语言表达能力锻炼、社会行为培养、艺术感受性等8项一对一的养护工作。
+          产后24至48小时之内，通过按摩疏通乳泉经络刺激乳房促进下奶
         </view>
       </view>
       <view class='yyson'>
-        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw2.jpg' />
-        <text>二便培养</text>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/cr2.jpg' />
+        <text>乳泉疏通</text>
         <view class='context'>
-          家家育婴师是专业照料、家家育婴师根据专家养育方案，提供婴儿营养膳食、习惯培养、动作技能训练、语言表达能力锻炼、社会行为培养、艺术感受性等8项一对一的养护工作。
+          通过经络及穴位疏通乳泉管，排空淤积的奶水，解决胀奶疼痛，让妈妈顺利母乳喂养。
         </view>
       </view>
       <view class='yyson'>
-        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw3.jpg' />
-        <text>四浴护理</text>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/cr3.jpg' />
+        <text>奶少增奶</text>
         <view class='context'>
-          家家育婴师是专业照料、护理和教育0-3岁婴幼儿的工作者。家家育婴师根据专家养育方案，提供婴儿营养膳食、习惯培养、艺术感受性等8项一对一的养护工作。
+          通过穴位按摩、喂养指导、饮食调理、心里疏导等方式，解决少奶问题。
         </view>
       </view>
       <view class='yyson'>
-        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw3.jpg' />
-        <text>四浴护理</text>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/cr4.jpg' />
+        <text>乳泉增生调理</text>
         <view class='context'>
-          家家育婴师是专业照料、护理和教育0-3岁婴幼儿的工作者。家家育婴师根据专家养育方案，提供婴儿营养膳食、习惯培养、艺术感受性等8项一对一的养护工作。
+          通过穴位按摩发射区刺激、心里调理，帮助女性疏通乳泉淤积，调理乳泉增生问题。
         </view>
       </view>
       <view class='yyson'>
-        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw3.jpg' />
-        <text>四浴护理</text>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/cr5.jpg' />
+        <text>断奶排淤</text>
         <view class='context'>
-          家家育婴师是专业照料、护理和教育0-3岁婴幼儿的工作者。家家育婴师根据专家养育方案，提供婴儿营养膳食、习惯培养、艺术感受性等8项一对一的养护工作。
+          协助断奶，并排除残留残汁，疏通乳泉经络，可以有效预防乳泉疾病。
         </view>
       </view>
       <view class='yyson'>
-        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/yyfw3.jpg' />
-        <text>四浴护理</text>
+        <image mode='widthFix' class='yyson' src='https://www.bodylive.cn/images/cr6.jpg' />
+        <text>健胸美胸</text>
         <view class='context'>
-          家家育婴师是专业照料、护理和教育0-3岁婴幼儿的工作者。家家育婴师根据专家养育方案，提供婴儿营养膳食、习惯培养、艺术感受性等8项一对一的养护工作。
+          改善胸部松弛、外扩、下垂、大小不一等产后问题，收紧胸部肌肤，为妈妈重塑坚挺胸型。
         </view>
       </view>
     </view>
@@ -304,9 +223,6 @@
   <view class='fwtong'>
     <view class='titd'>服务反馈</view>
     <scroll-view class="scroll-view_H" scroll-x="true" style=" white-space: nowrap; display: flex">
-      <image mode='widthFix' class='fk' src='https://www.bodylive.cn/images/fk.jpg' />
-      <image mode='widthFix' class='fk' src='https://www.bodylive.cn/images/fk.jpg' />
-      <image mode='widthFix' class='fk' src='https://www.bodylive.cn/images/fk.jpg' />
       <image mode='widthFix' class='fk' src='https://www.bodylive.cn/images/fk.jpg' />
     </scroll-view>
   </view>

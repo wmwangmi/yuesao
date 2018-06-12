@@ -32,12 +32,12 @@
     <text>企业理念：</text>爱心、感恩、利他
   </view>
   <image class='yzimg' mode='widthFix' src='{{app.originurl}}{{aboutob.thumb}}' />
-  <view class='vediodiv'>
+  <!-- <view class='vediodiv'>
     <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" poster="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527841749278&di=eaa66581ee1aca8490135ba07ab915f2&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fd50735fae6cd7b896fede657052442a7d8330e65.jpg" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls='true'></video>
-  </view>
+  </view> -->
 </view>
 
-<view class='jjtit'>
+<!-- <view class='jjtit'>
   家家<text>月嫂平台</text>
 </view>
 <view class='baicontt'>
@@ -122,4 +122,4 @@
     <view class='jjwen'>二级公共营养师</view>
     <view class='jjwen'>产后修复师 高级护理师</view>
   </view>
-</view>
+</view> -->
