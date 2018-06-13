@@ -22,6 +22,10 @@ Page({
       wx.navigateTo({
         url: '/pages/xdan/xdan?yid=' + this.data.yuesao_id + '&spu=' + this.data.identxx.spu + '&nameer=' + this.data.identxx.goods_name,
       })
+    }else{
+      wx.navigateTo({
+        url: '/pages/login/login'
+      })
     }
     // wx.showModal({
     //   title:'提示',

@@ -131,6 +131,22 @@ textarea{
   top:45%;
   transform: translate(-50%,-50%);
 }
+.showimgls{
+  width:100%;
+  height:auto;
+  overflow: hidden;
+}
+.showimgls view{
+  width:25%;
+  height:250rpx;
+  float:left;
+  margin:10px;
+}
+.showimgls view image{
+  width:100%;
+  object-fit: contain;
+  object-position: center;
+}
 .tongbu{
   width:90%;
   height:50rpx;

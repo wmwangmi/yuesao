@@ -6,6 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    app: app,
+    showimgurl:[],
     select:false,
     yid:'',
     yname:'',
@@ -74,6 +76,7 @@ Page({
     });
   },
   choseimg:function (){
+    let that=this;
     wx.chooseImage({
       count: 1, // 默认9
       sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
@@ -81,9 +84,17 @@ Page({
       success: function (res) {
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
         var tempFilePaths = res.tempFilePaths
+        console.log(tempFilePaths);
+        that.setData({
+          showimgurl: tempFilePaths
+        });
+        wx.previewImage({
+          current: '', // 当前显示图片的http链接
+          urls: tempFilePaths // 需要预览的图片http链接列表
+        })
 
         wx.uploadFile({
-          url: 'https://example.weixin.qq.com/upload', //仅为示例，非真实的接口地址
+          url: that.data.app.originurl, //仅为示例，非真实的接口地址
           filePath: tempFilePaths[0],
           name: 'file',
           formData: {

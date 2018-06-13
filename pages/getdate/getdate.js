@@ -13,9 +13,17 @@ Page({
   },
   bindDateChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      date: e.detail.value
-    })
+    let getddym = (e.detail.value).split('-');
+    let a = parseInt(getddym[0]), b = parseInt(getddym[1]);
+    var that = this;
+    this.getdangq(a, b, function (d) {
+      // that.setData({
+      //   date: e.detail.value
+      // })
+      that.setData({
+        databanls: that.chongzhuang( a, b, '', d)
+      });
+    });
   },
   prevdata: function () {
     var that=this;
@@ -60,6 +68,9 @@ Page({
      b = new Date(year2, month2, 0);
      c = new Date(year3, month3, 0);
      var d = [{ y: year1, m: month1, d: a.getDate() }, { y: year2, m: month2, d: b.getDate() }, { y: year3, m: month3, d: c.getDate() }];
+     if (String(month2).length<2){
+       month2 = '0' + month2;
+     }
      this.setData({
        date: year2 + '-' + month2
      });

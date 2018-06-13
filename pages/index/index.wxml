@@ -13,8 +13,8 @@
     <text>{{item.name}}</text>
   </view>
 </view>
-<view class='searchys' bindtap='gosearchys'>
-  <view class='top'>
+<view class='searchys'>
+  <view class='top' bindtap='gosearchys'>
     帮您找月嫂
     <image mode='widthFix' src='https://www.bodylive.cn/images/rightarr.png' />
   </view>
@@ -41,7 +41,8 @@
   </view>
   <view class='title textadd'>
     <image mode='widthFix' src='https://www.bodylive.cn/images/laba.png' /> 
-    <view animation="{{animationData}}">
+    <view style="transition: transform {{animm}} ease 0ms; transform: translateY( {{topmargin}}px ); transform-origin: 50% 50% 0px;backface-visibility: hidden;">
+     <!-- animation="{{animationData}}" -->
       <text wx:for='{{news}}' wx:key='{{index}}'>{{item}}</text>
     </view>
   </view>

@@ -1,6 +1,6 @@
 <!--pages/login/login.wxml-->
 <view class='tishi'>
-  绑定手机后，您在家家月嫂微信端的数据将在其他本公司平台上共享。
+  绑定手机后，您在微信端的数据将在其他本公司平台上共享。
 </view>
 <view class='inputdiv'>
   <view class='son'>

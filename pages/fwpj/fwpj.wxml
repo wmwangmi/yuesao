@@ -24,30 +24,14 @@
     <image mode='widthFix' src='https://www.bodylive.cn/images/xin2.png' />
   </view>
 </view>
-<view class='fenpj flexdiv1'>
-  <view class='left'>专业护理</view>
-  <view class='right'>
-    <image mode='widthFix' src='https://www.bodylive.cn/images/xin2.png' />
-    <image mode='widthFix' src='https://www.bodylive.cn/images/xin2.png' />
-    <image mode='widthFix' src='https://www.bodylive.cn/images/xin2.png' />
-    <image mode='widthFix' src='https://www.bodylive.cn/images/xin2.png' />
-    <image mode='widthFix' src='https://www.bodylive.cn/images/xin2.png' />
-  </view>
-</view>
-<view class='fenpj flexdiv1'>
-  <view class='left'>专业护理</view>
-  <view class='right'>
-    <image mode='widthFix' src='https://www.bodylive.cn/images/xin2.png' />
-    <image mode='widthFix' src='https://www.bodylive.cn/images/xin2.png' />
-    <image mode='widthFix' src='https://www.bodylive.cn/images/xin2.png' />
-    <image mode='widthFix' src='https://www.bodylive.cn/images/xin2.png' />
-    <image mode='widthFix' src='https://www.bodylive.cn/images/xin2.png' />
-  </view>
 </view> -->
 <textarea bindblur='getpj' value='{{pj}}'  placeholder='月嫂是否专业，态度好不好，服务项目是否让您满意' placeholder-class='teclass'></textarea>
-<!-- <view class='tjtupian'>
+ <view class='tjtupian'>
   添加图片<text>（分享一些月嫂服务期间的温馨照片吧）</text>
 </view>
 <view class='addphto' bindtap='choseimg'></view>
-<view bindtap='selectchange' class='tongbu {{select?"select":""}}'>同步微信朋友圈</view> -->
+<view class='showimgls'>
+  <view wx:for='{{showimgurl}}' wx:key='index'><image src='{{item}}' /></view>
+</view>
+<!-- <view bindtap='selectchange' class='tongbu {{select?"select":""}}'></view>  -->
 <view class='tjbar' bindtap='subpj'>提交评价</view>

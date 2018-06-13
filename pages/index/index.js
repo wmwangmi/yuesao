@@ -5,6 +5,9 @@ import util from '../../utils/util.js'
 Page({
   data: {
     app:app,
+    topmargin:0,
+    steps:1,
+    animm:'300ms',
     started:'',
     endd:'',
     userInfo: {},
@@ -111,27 +114,61 @@ Page({
       });
 
       var hei = (that.data.news.length - 1) * 35;
-      var animation = wx.createAnimation({
-        duration: 300,
-        timingFunction: 'ease',
-      })
-      that.animation = animation
-      var steps = 1;
-      animation.translateY(-(steps)).step()
-      that.setData({
-        animationData: animation.export()
-      })
+      // var animation = wx.createAnimation({
+      //   duration: 300,
+      //   timingFunction: 'ease',
+      // })
+      // that.animation = animation
+      // animation.translateY(0).step()
+      // that.setData({
+      //   animationData: animation.export()
+      // })
+      // var steps = 1;
+      // animation.translateY(-(steps)).step()
+      // that.setData({
+      //   animationData: animation.export()
+      // })
+      // that.stopinterl = setInterval(function () {
+      //   if (parseInt(hei) < Math.abs(steps)) {
+      //     steps = 1;
+      //     animation.translateY(0).step({ timingFunction: 'step-start' });
+      //   }
+      //   animation.translateY(-steps).step()
+      //   steps += 1
+      //   that.setData({
+      //     animationData: animation.export()
+      //   })
+      // }.bind(that), 90)
+
+      var s = 0;
+      var gaifou=false;
       that.stopinterl = setInterval(function () {
-        if (parseInt(hei) < Math.abs(steps)) {
-          steps = 1;
-          animation.translateY(0).step({ timingFunction: 'step-start' });
+        if (parseInt(hei) < Math.abs(that.data.steps)) {
+          that.setData({
+            animm: 0
+          }); 
+          that.setData({
+            steps:0
+          }); 
+          gaifou=true;
         }
-        animation.translateY(-steps).step()
-        steps += 1
+        if (gaifou) {
+          setTimeout(function (){
+            that.setData({
+              animm: '300ms'
+            });
+          },300);
+          gaifou=false;
+        }
+        s = that.data.steps+1;
         that.setData({
-          animationData: animation.export()
+          steps:s
+        });
+        that.setData({
+          topmargin: -(that.data.steps)
         })
       }.bind(that), 90)
+
     });
   },
   msfn:function (e){
