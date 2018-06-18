@@ -30,8 +30,8 @@
   添加图片<text>（分享一些月嫂服务期间的温馨照片吧）</text>
 </view>
 <view class='addphto' bindtap='choseimg'></view>
-<view class='showimgls'>
-  <view wx:for='{{showimgurl}}' wx:key='index'><image src='{{item}}' /></view>
+<view class='showimgls' wx:if="{{upimg}}.length<=0">
+  <view wx:for='{{upimg}}' wx:key='index'><image mode='widthFix' src='{{app.originurl}}{{item}}' /></view>
 </view>
 <!-- <view bindtap='selectchange' class='tongbu {{select?"select":""}}'></view>  -->
 <view class='tjbar' bindtap='subpj'>提交评价</view>

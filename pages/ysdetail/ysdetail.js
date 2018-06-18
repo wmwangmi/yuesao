@@ -27,24 +27,6 @@ Page({
         url: '/pages/login/login'
       })
     }
-    // wx.showModal({
-    //   title:'提示',
-    //   content: '是否拨打电话',
-    //   success: function (res) {
-    //     if (res.confirm) {
-    //       wx.makePhoneCall({
-    //         phoneNumber: this.phonenum,
-    //         fail: function () {
-    //           wx.showToast({
-    //             title: '线路繁忙'
-    //           })
-    //         }
-    //       })
-    //     } else if (res.cancel) {
-    //       console.log('用户点击取消')
-    //     }
-    //   }
-    // });
     
   },
   showxx:function(){
@@ -88,8 +70,22 @@ Page({
       that.setData({
         identxx: res.data.data
       });
+      let kw = res.data.data.keywords.split('，');
+      that.setData({
+        zheng: kw
+      });
+      let zh = res.data.data.goods_remark.split('，');
+      console.log(zh);
+      that.setData({
+        biaoqian: zh
+      }); 
     });
     app.ask('home/api/pingjia', { appid: app.appid, param: '', yuesid: options.yid}, function (res) {
+      let dd = res.data.data.pjlist;
+      for (let i = 0; i < dd.length;i++){
+        dd[i].pl_img = JSON.parse(dd[i].pl_img);
+      };
+      console.log(res.data.data);
       that.setData({
         pjdata:res.data.data
       });

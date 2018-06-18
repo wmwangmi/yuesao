@@ -79,4 +79,3 @@
     <view class='button2' data-yid='{{item.goods_id}}' data-yname='{{item.ys_name}}' bindtap='payaction2'>等待评价</view>
   </view>
 </view>
-<view class='button2' data-yid='1' data-yname='11' bindtap='payaction2'>等待评价</view>

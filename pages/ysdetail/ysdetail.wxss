@@ -148,10 +148,10 @@ page{
 }
 .biaoq .bq{
   line-height:45rpx;
-  display: inline;
+  display: inline-block;
   border:1px solid #ddd;
   border-radius:45rpx;
-  padding:10rpx 15rpx;
+  padding:0 10rpx;
   font-size:20rpx;
   margin:auto 10rpx;
 }
@@ -251,6 +251,18 @@ page{
   overflow:hidden;
   padding:30rpx 0;
   line-height:35rpx;
+}
+.pingjiadiv .right .descimgls{
+  width:100%;
+  height:auto;
+  overflow:hidden;
+}
+.pingjiadiv .right .descimgls image{
+  width:20%;
+  height:120rpx;
+  overflow:hidden;
+  margin:5px;
+  float:left;
 }
 .dateclass{
   font-style: italic;

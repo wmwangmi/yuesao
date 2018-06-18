@@ -13,13 +13,13 @@
       </view>
       <view class='desage'>
         {{identxx.sku}}
-        {{identxx.age}}
+        {{identxx.age}}岁
       </view>
       <view class='payfor'>
         <text class='fontcol'>￥{{identxx.shop_price}}</text>/26天
       </view>
   </view>
-  <image class='phto' mode='widthFix' src='{{app.allconfig.originurl}}{{item.original_img}}' />
+  <image class='phto' mode='widthFix' src='{{app.allconfig.originurl}}{{identxx.original_img}}' />
 </view>
 <view class='tongtit'>
   <view class='left'>
@@ -43,7 +43,7 @@
 <view class='tongtit3 styl1'>
   <text class='bqian' wx:for='{{zheng}}' wx:key='{{index}}'>{{item}}</text>
   <view class='desc'>
-    奥杰，喜欢宝宝而选择这个职业，哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+    {{identxx.goods_content}}
   </view>
   <view class='biaoq'>
     <view class='bq fontcol' wx:for='{{biaoqian}}' wx:key='index'>{{item}}</view>
@@ -91,7 +91,7 @@
   </view>
   <view class='right addstyl2'>
      综合评价
-    <template is='xinxin'></template>
+    <template is='xinxin' data='{{...pjdata}}'></template>
      {{pjdata.p_all_fen}}分
   </view>
 </view>
@@ -105,12 +105,15 @@
 </view>
 <view class='pingjiadiv' wx:for='{{pjdata.pjlist}}' wx:key='index'>
   <view class='left'>
-    <image mode='widthFix' src='{{item.photo}}' />
+    <image mode='widthFix' src='{{app.originurl}}{{item.photo}}' />
   </view>
   <view class='right'>
     <view class='top'>{{item.name}} <template is='xinxin'></template> {{item.p_fen}}分    服务<text class='fontcol'>{{item.days}}</text> <text class='dateclass'>{{item.date}}</text></view>
     <view class='desc'>
       {{item.p_jia_content}}
+    </view>
+    <view class='descimgls'>
+      <image wx:for='{{item.pl_img}}' wx:key='i' wx:for-item='imgl' src='{{app.originurl}}{{imgl}}' />
     </view>
   </view>
 </view>

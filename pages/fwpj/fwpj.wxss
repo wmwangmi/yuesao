@@ -137,10 +137,11 @@ textarea{
   overflow: hidden;
 }
 .showimgls view{
-  width:25%;
-  height:250rpx;
+  width:20%;
+  height:120rpx;
   float:left;
   margin:10px;
+  overflow:hidden;
 }
 .showimgls view image{
   width:100%;

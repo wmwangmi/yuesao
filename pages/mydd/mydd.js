@@ -49,6 +49,7 @@ Page({
       that.setData({
         list: res.data.data
       });
+      console.log(res.data.data);
     });
   },
   /**

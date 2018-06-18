@@ -13,6 +13,8 @@ Page({
     yname:'',
     pfen:0,
     pj:'',
+    upimg:[],
+    upimged:true,
     xingls: ['https://www.bodylive.cn/images/xin2.png', 'https://www.bodylive.cn/images/xin2.png', 'https://www.bodylive.cn/images/xin2.png', 'https://www.bodylive.cn/images/xin2.png','https://www.bodylive.cn/images/xin2.png']
   },
   liangxing: function(e){
@@ -50,12 +52,21 @@ Page({
   },
   subpj: function (e){
     var that = this;
-    let paramdata = { p_fen: this.data.pfen, p_jia_content: this.data.pj, user_id: wx.getStorageSync('loginbool')}
+    if (!that.data.upimged){//如果有图片正在上传
+      return;
+    }
+    let paramdata = { p_fen: this.data.pfen, p_jia_content: this.data.pj, user_id: wx.getStorageSync('loginbool'), pl_img: JSON.stringify(this.data.upimg)}
     app.ask('home/api/pingjia', { appid: app.appid, param: paramdata , yuesid:that.data.yid }, function (res) {
       wx.showToast({
-        title: '取消成功',
+        title: '评价成功',
         icon: 'success'
       })
+      let st=setTimeout(function (){
+        wx.navigateTo({
+          url: '/pages/index/index',
+        })
+        clearTimeout(st);
+      },1000);
     });
   },
   /**
@@ -78,38 +89,59 @@ Page({
   choseimg:function (){
     let that=this;
     wx.chooseImage({
-      count: 1, // 默认9
+      count: 6, // 默认9
       sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
       success: function (res) {
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
         var tempFilePaths = res.tempFilePaths
-        console.log(tempFilePaths);
+        if (that.data.upimg.length + tempFilePaths.length>6){
+          wx.showToast({
+            title:'最多可上传6张',
+            icon:'none'
+          });
+          return;
+        }
         that.setData({
-          showimgurl: tempFilePaths
+          upimged:false
         });
-        wx.previewImage({
-          current: '', // 当前显示图片的http链接
-          urls: tempFilePaths // 需要预览的图片http链接列表
-        })
-
-        wx.uploadFile({
-          url: that.data.app.originurl, //仅为示例，非真实的接口地址
-          filePath: tempFilePaths[0],
-          name: 'file',
-          formData: {
-            'user': 'test'
-          },
-          success: function (res) {
-            var data = res.data
-            //do something
-          }
-        })
+        // wx.previewImage({
+        //   current: '', // 当前显示图片的http链接
+        //   urls: tempFilePaths // 需要预览的图片http链接列表
+        // })
+        for (let i = 0; i < tempFilePaths.length;i++){
+          that.upfileimg(tempFilePaths[i]);
+        }
+        
         
       }
     })
   },
+  upfileimg:function (fileurl){
+    let that=this;
+    wx.uploadFile({
+      url: that.data.app.originurl + '/home/api/uploadimg', //仅为示例，非真实的接口地址
+      filePath: fileurl,
+      name: 'file',
+      formData: {
+        'user': 'test'
+      },
+      success: function (res) {
+        var data = res.data
+        let dd = res.data;
 
+        let imgu = JSON.parse(dd).data;
+        let tdd = that.data.upimg;
+        for (let i = 0; i < imgu.length; i++) {
+          tdd[tdd.length + i] = imgu[i]
+        }
+        that.setData({
+          upimg: tdd,
+          upimged: true
+        });
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
