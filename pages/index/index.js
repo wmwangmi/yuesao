@@ -95,6 +95,7 @@ Page({
       })
     }
     var that=this;
+    console.log(app.appid);
     app.ask('home/api/nav',{appid:app.appid},function (res){
       that.setData({
         navibars: res.data.data
