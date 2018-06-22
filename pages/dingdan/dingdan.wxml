@@ -41,11 +41,11 @@
   <view class='line'>
     <view class='left'>服务天数</view>
     <view class='right'>
-      <!-- <picker mode = 'selector' bindchange="bindPickerChange" value="{{fw_t_num}}" range="{{array}}"> -->
+       <picker mode = 'selector' bindchange="bindPickerChange" value="{{fw_t_num}}" range="{{array}}"> 
         <view class="picker">
           {{array[fw_t_num]}}
         </view>
-      <!-- </picker> -->
+       </picker> 
     </view>
   </view>
 </view>
@@ -66,7 +66,7 @@
 </view>
 <view class='conk'>
   <view class='title flexdib addbob'>
-    <view class='left'>住家月子服务26天</view><view class='right'>￥{{payfor}}</view>
+    <view class='left'>住家月子服务{{array[fw_t_num]}}天</view><view class='right'>￥{{payforn}}</view>
   </view>
   <view class='wxts'>
     <text>温馨提示：</text>

@@ -20,7 +20,7 @@
   <view class='xqi'>六</view>
 </view>
 <view class='dateBan'>
-  <view wx:for='{{databanls}}' data-val='{{item.dt}}' data-type='{{item.tp}}' wx:key='index' class='son {{item.defaulcla?"defaulcla":""}} {{item.nicecla?"classnic":""}}' bindtap='datablock'>{{item.dt}}</view>
+  <view wx:for='{{databanls}}' data-selected='{{item.selected}}' data-val='{{item.dt}}' data-type='{{item.tp}}' wx:key='index' class='son {{item.defaulcla?"defaulcla":""}} {{item.nicecla?"classnic":""}}' bindtap='datablock'>{{item.dt}}</view>
 </view>
 <view class='tishi'>
   <view class='yuan'></view>

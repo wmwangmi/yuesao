@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: ['26'],
+    array: [],
     region: ['广东省', '广州市', '海珠区'],
     customItem: '全部',
     select:0,
@@ -26,7 +26,8 @@ Page({
     enddata:'',
     payfor:'',
     zilen:0,
-    maxzilen:200
+    maxzilen:200,
+    payforn:''
   },
   ongetval: function (e) {
     let inpname = e.target.dataset.inpname;
@@ -86,8 +87,9 @@ Page({
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      index: e.detail.value
+      fw_t_num: e.detail.value
     })
+    this.getmoneynum(this.data.levelnumsel, this.data.bb_numsel);
   },
   selxing: function (e) {
     this.setData({
@@ -124,10 +126,11 @@ Page({
     let bb_num=bn,level=le;
     console.log(app.appid);
     app.ask('home/api/level_num_price', { appid: app.appid, level: level, bb_num: bb_num }, function (res) {
-      console.log(res);
+      console.log(that.data.array[that.data.fw_t_num]);
       if (res.data.data.ys_price){
         that.setData({
-          payfor: res.data.data.ys_price
+          payfor: res.data.data.ys_price,
+          payforn: Math.round(res.data.data.ys_price / 26 * that.data.array[that.data.fw_t_num])
         });
       }
       // that.setData({
@@ -188,6 +191,15 @@ Page({
         mobile: uphone
       });
     }
+    let arrday=[];
+    let j=0;
+    for(let i=26;i>=1;i--){
+      arrday[j] = i;
+      j++;
+    }
+    this.setData({
+      array:arrday
+    });
     this.getmoneynum(2,1);
     let dateer=new Date();
     let nowdate = dateer.getFullYear() + '-' + (dateer.getMonth() + 1) + '-' + dateer.getDate();

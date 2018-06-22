@@ -182,9 +182,9 @@ Page({
     });
     let par = {}
     par.name = this.data.name;
-    par.order_time = this.data.order_time;
+    par.order_time = this.data.date;
     par.phone = this.data.phone;
-    console.log(par.phone);
+    console.log(par.order_time);
     if(!this.data.name){
       wx.showToast({
         title: '姓名不可空',
@@ -226,11 +226,11 @@ Page({
       });
     }
   },
-  bango:function (e){
-    wx.navigateTo({
-      url: e.currentTarget.dataset.link
-    })
-  },
+  // bango:function (e){
+  //   wx.navigateTo({
+  //     url: e.currentTarget.dataset.link
+  //   })
+  // },
   onShareAppMessage: function (res) {
     if (res.from === 'menu') {
       // 来自页面内转发按钮
@@ -264,7 +264,7 @@ Page({
     wx.navigateTo({
       url: '/pages/searchys/searchys',
     })
-  },// url: '/pages/login/login',
+  },
   goxiadan: function (e) {
     wx.navigateTo({
       // url: '/pages/login/login',

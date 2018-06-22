@@ -27,7 +27,8 @@ Page({
   },
   prevdata: function () {
     var that=this;
-    this.getdangq(this.data.sanliedata[0].y, this.data.sanliedata[0].m,function (d){
+    this.getdangq(this.data.sanliedata[0].y, this.data.sanliedata[0].m, function (d) {
+      console.log(that.data.sanliedata[0].y, that.data.sanliedata[0].m,d);
       that.setData({
         databanls: that.chongzhuang(that.data.sanliedata[0].y, that.data.sanliedata[0].m, '', d)
       });
@@ -40,17 +41,26 @@ Page({
   nextdata: function () {
     var that = this;
     this.getdangq(this.data.sanliedata[2].y, this.data.sanliedata[2].m, function (d) {
+      console.log(that.data.sanliedata[2].y, that.data.sanliedata[2].m, d);
       that.setData({
         databanls: that.chongzhuang(that.data.sanliedata[2].y, that.data.sanliedata[2].m,'',d)
       });
     });
   },
   datablock: function (e){
-    let typ=e.target.dataset.type;
+    let typ = e.target.dataset.type;
+    let sel = e.target.dataset.selected;
     if(typ == 'prev'){
       this.prevdata();
     } else if(typ == 'next'){
       this.nextdata();
+    }else{// typ='now'
+      if (sel){
+        wx.showToast({
+          title: '该月嫂档期已被预订，请确认档期或选择其他月嫂',
+          icon: 'none'
+        });
+      }
     }
   },
   getDaye: function (year, month) {//获取上，本，下月年月总共的天数
@@ -112,6 +122,7 @@ Page({
       let objdarr = {};
       objdarr.dt = i;
       objdarr.tp = 'prev';
+      objdarr.selected = false;
       darr.push(objdarr);
     }
     for (let i = 1; i <= dateban[1].d; i++) {
@@ -119,9 +130,11 @@ Page({
       objdarr.dt = i;
       objdarr.tp = 'now';
       objdarr.defaulcla = 'classnow';
-      for (let j = 0; j < mst.length;j++){
+      objdarr.selected = false;
+      for (let j = 0; j < mst.length; j++) {
         if (i == mst[j]){
           objdarr.nicecla = 'classnic';
+          objdarr.selected=true;
         }
       }
       darr.push(objdarr);
@@ -131,6 +144,7 @@ Page({
       let objdarr = {};
       objdarr.dt = i;
       objdarr.tp = 'next';
+      objdarr.selected = false;
       darr.push(objdarr);
     }
     return darr;
@@ -152,7 +166,7 @@ Page({
       data: getd.getFullYear+'-'+(getd.getMonth+1)
     });
     var that = this;
-    let param = JSON.stringify({ 'goods_id': that.data.yid, 'month': (getd.getMonth+1), 'year': getd.getFullYear});
+    let param = JSON.stringify({ 'goods_id': that.data.yid, 'month': (getd.getMonth() + 1), 'year': getd.getFullYear() });
     app.ask('home/api/dangq', { appid: app.appid, param: param }, function (res) {
       let dats;
       if (res.data && res.data.data){

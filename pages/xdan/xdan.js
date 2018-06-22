@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: ['26'],
+    app: app,
+    array: [],
     region: ['广东省', '广州市', '海珠区'],
     customItem: '全部',
     select: 0,
@@ -27,9 +28,11 @@ Page({
     payfor: '',
     zilen: 0,
     maxzilen: 200,
+    payforn: '',
     yid: '',
     ysspu: '',
-    nameer: ''
+    nameer: '',
+    originimg:''
   },
   ongetval: function (e) {
     let inpname = e.target.dataset.inpname;
@@ -89,8 +92,9 @@ Page({
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      index: e.detail.value
+      fw_t_num: e.detail.value
     })
+    this.getmoneynum(this.data.levelnumsel, this.data.bb_numsel);
   },
   selxing: function (e) {
     this.setData({
@@ -127,10 +131,10 @@ Page({
     let bb_num = bn, level = le;
     console.log(app.appid);
     app.ask('home/api/level_num_price', { appid: app.appid, level: level, bb_num: bb_num }, function (res) {
-      console.log(res);
       if (res.data.data.ys_price) {
         that.setData({
-          payfor: res.data.data.ys_price
+          payfor: res.data.data.ys_price,
+          payforn: Math.round(res.data.data.ys_price / 26 * that.data.array[that.data.fw_t_num])
         });
       }
       // that.setData({
@@ -183,17 +187,31 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      yid: options.yid
+      yid: options.yid,
+      ysspu: options.spu,
+      nameer: options.nameer,
+      originimg: options.imgurl
     });
-    this.setData({
-      ysspu: options.spu
-    });
-    this.setData({
-      nameer: options.nameer
-    }); 
     wx.setNavigationBarTitle({
       title: app.allconfig.title.one[6]
     })
+    let that=this;
+    app.ask('home/api/order', { appid: app.appid, param: '', yuesao_id: this.data.yid }, function (res) {
+      console.log(res);
+      that.setData({
+        levelnumsel:res.data.data.level
+      });
+    });
+
+    let arrday = [];
+    let j = 0;
+    for (let i = 26; i >= 1; i--) {
+      arrday[j] = i;
+      j++;
+    }
+    this.setData({
+      array: arrday
+    });
     if (wx.getStorageSync('uphone')) {
       let uphone = wx.getStorageSync('uphone');
       this.setData({

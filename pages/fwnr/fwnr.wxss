@@ -76,8 +76,8 @@ page{
 .bod .right .son.addafter::after{
   content: ' ';
   position: absolute;
-  width:25rpx;
-  height:40rpx;
+  width:15rpx;
+  height:30rpx;
   border-right:1px solid #3CC51F;
   border-bottom:1px solid #3CC51F;
   left:33%;
@@ -92,8 +92,8 @@ page{
 .bod .tong.addafter::after{
   content: ' ';
   position: absolute;
-  width:25rpx;
-  height:40rpx;
+  width:15rpx;
+  height:30rpx;
   border-right:1px solid #3CC51F;
   border-bottom:1px solid #3CC51F;
   left:5%;

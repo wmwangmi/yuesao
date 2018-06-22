@@ -20,7 +20,7 @@ Page({
   callfor: function (){
     if(wx.getStorageSync('loginbool')){
       wx.navigateTo({
-        url: '/pages/xdan/xdan?yid=' + this.data.yuesao_id + '&spu=' + this.data.identxx.spu + '&nameer=' + this.data.identxx.goods_name,
+        url: '/pages/xdan/xdan?yid=' + this.data.yuesao_id + '&spu=' + this.data.identxx.spu + '&nameer=' + this.data.identxx.goods_name + '&imgurl=' + this.data.identxx.original_img,
       })
     }else{
       wx.navigateTo({
@@ -75,7 +75,6 @@ Page({
         zheng: kw
       });
       let zh = res.data.data.goods_remark.split('，');
-      console.log(zh);
       that.setData({
         biaoqian: zh
       }); 
@@ -85,7 +84,6 @@ Page({
       for (let i = 0; i < dd.length;i++){
         dd[i].pl_img = JSON.parse(dd[i].pl_img);
       };
-      console.log(res.data.data);
       that.setData({
         pjdata:res.data.data
       });

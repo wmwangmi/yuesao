@@ -1,7 +1,7 @@
 <!--pages/dingdan/dingdan.wxml-->
 <view class='topkuang'>
   <view class='left'>
-    <image mode='widthFix' src='https://www.bodylive.cn/public/upload/goods/2018/06-06/563eff0d1799c27edf3d5a947fcfa5dc.png' />
+    <image mode='widthFix' src='{{app.allconfig.originurl}}{{originimg}}' />
     <text>{{ysspu}}</text>
   </view>
   <view class='right'>
@@ -52,20 +52,20 @@
   <view class='line'>
     <view class='left'>服务天数</view>
     <view class='right'>
-      <!-- <picker mode = 'selector' bindchange="bindPickerChange" value="{{fw_t_num}}" range="{{array}}"> -->
+       <picker mode = 'selector' bindchange="bindPickerChange" value="{{fw_t_num}}" range="{{array}}"> 
         <view class="picker">
           {{array[fw_t_num]}}
         </view>
-      <!-- </picker> -->
+       </picker> 
     </view>
   </view>
 </view>
-<view class='conk'>
+<!-- <view class='conk'>
   <view class='title'>月嫂价位</view>
   <view class='flexdib'>
     <view wx:for='{{xingarr}}' wx:key='index' class='tabor {{select==index?"select":""}}' data-ind='{{index}}' data-levelnum='{{item.levelnum}}'  bindtap='selxing'>{{item.level}}</view>
   </view>
-</view>
+</view> -->
 <view class='conk'>
   <view class='title'>宝宝数量</view>
   <view class='flexdib'>
@@ -77,7 +77,7 @@
 </view>
 <view class='conk'>
   <view class='title flexdib addbob'>
-    <view class='left'>住家月子服务26天</view><view class='right'>￥{{payfor}}</view>
+    <view class='left'>住家月子服务{{array[fw_t_num]}}天</view><view class='right'>￥{{payforn}}</view>
   </view>
   <view class='wxts'>
     <text>温馨提示：</text>

@@ -19,7 +19,7 @@
     <image mode='widthFix' src='https://www.bodylive.cn/images/rightarr.png' />
   </view>
   <view class='centerimg'>
-    <image mode='widthFix' data-link='{{bigimg.link}}' bindtap='bango' src='{{app.originurl}}{{bigimg.img}}' />
+    <image mode='widthFix' bindtap='gosearchys' data-link='{{bigimg.link}}' src='{{app.originurl}}{{bigimg.img}}' />
     <view class='shangbiao'><text>HOT</text></view>
     <view class='textdiv1'>
       <view class='left'>26天住家月子服务</view>
