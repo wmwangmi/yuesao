@@ -67,6 +67,7 @@ Page({
     });
     var that = this;
     app.ask('home/api/yuesaoxq', { appid: app.appid, yuesao_id: options.yid }, function (res) {
+      res.data.data.goods_content = res.data.data.goods_content.replace(/&lt;p&gt;/, '').replace(/&lt;\/p&gt;/, '');
       that.setData({
         identxx: res.data.data
       });
