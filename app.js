@@ -48,8 +48,11 @@ App({
     wx.request({
       url: Url, 
       data: Data,
+      // header: {
+      //   'content-type': 'application/json'
+      // },
       header: {
-        'content-type': 'application/json'
+        'content-type': 'application/x-www-form-urlencoded'
       },
       success: function (res) {
         if (res.statusCode!=200){

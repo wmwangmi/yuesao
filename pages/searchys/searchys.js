@@ -54,6 +54,9 @@ Page({
 
     var that = this;
     app.ask('home/api/searchys', { appid: app.appid }, function (res) {
+      for (let i = 0; i < res.data.data.length;i++){
+        res.data.data[i].goods_content=res.data.data[i].goods_content.replace(/&lt;p&gt;/, '').replace(/&lt;\/p&gt;/, '');
+      }
       that.setData({
         yslist: res.data.data
       });

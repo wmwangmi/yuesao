@@ -42,7 +42,7 @@ page{
 }
 .bod{
   width:100%;
-  height:180rpx;
+  height:120rpx;
   display: flex;
   flex-flow: row wrap;
   padding:0 20rpx;
@@ -55,13 +55,13 @@ page{
 .bod .left{
   flex:3;
   min-width: 5%;
-  height:90rpx;
-  line-height:90rpx;
+  height:60rpx;
+  line-height:60rpx;
   font-size:25rpx;
   overflow: hidden;
 }
 .bod .right{
-  height:90rpx;
+  height:60rpx;
   flex:7;
   display: flex;
   flex-flow: row wrap;
@@ -76,8 +76,8 @@ page{
 .bod .right .son.addafter::after{
   content: ' ';
   position: absolute;
-  width:15rpx;
-  height:30rpx;
+  width:12rpx;
+  height:20rpx;
   border-right:1px solid #3CC51F;
   border-bottom:1px solid #3CC51F;
   left:33%;
@@ -86,14 +86,14 @@ page{
 }
 .bod .tong{
   width:100%;
-  height:90rpx;
+  height:60rpx;
   position: relative;
 }
 .bod .tong.addafter::after{
   content: ' ';
   position: absolute;
-  width:15rpx;
-  height:30rpx;
+  width:12rpx;
+  height:20rpx;
   border-right:1px solid #3CC51F;
   border-bottom:1px solid #3CC51F;
   left:5%;

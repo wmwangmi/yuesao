@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    app: app,
     array: [],
     region: ['广东省', '广州市', '海珠区'],
     customItem: '全部',
@@ -140,17 +141,42 @@ Page({
   },
   payaction: function (e) {
     var that = this;
-    if (!that.data.consignee || !that.data.address){
-      wx.showModal({ title: '提示：', content: '联系人或者地址不为空',showCancel:false})
-    }
-    let paramdata = { address: that.data.address, bb_num: that.data.bb_numsel, consignee: that.data.consignee, fw_t_num: that.data.array[that.data.fw_t_num], level: that.data.levelnumsel, mobile: that.data.mobile, order_time: that.data.order_time, user_id: wx.getStorageSync('loginbool'), user_note: that.data.user_note, ys_price: that.data.payfor};
-    paramdata = JSON.stringify(paramdata);
-    console.log(paramdata);
-    app.ask('home/api/order', { appid: app.appid, param: paramdata, yuesao_id:'' }, function (res) {
-      console.log(res);
-      wx.navigateTo({
-        url: '/pages/surepay/surepay',
-      })
+    let fwday = (that.data.order_time).split('-');
+    let param = JSON.stringify({ 'goods_id': that.data.yid, 'month': fwday[1], 'year': fwday[0] });
+    app.ask('home/api/dangq', { appid: app.appid, param: param }, function (res) {
+      let dats;
+      if (res.data && res.data.data) {
+        dats = res.data.data.tian.split(',');
+        for (let i = 0; i < dats.length; i++) {
+          if (parseInt(dats[i]) == fwday[2]) {
+            wx.showToast({
+              title: '该月嫂档期已被预订，请确认档期或选择其他月嫂',
+              icon: 'none'
+            })
+            return;
+          }
+        }
+      }
+      if (!that.data.consignee || !that.data.address) {
+        wx.showModal({ title: '提示：', content: '联系人或者地址不为空', showCancel: false })
+      }
+      let paramdata = { address: that.data.address, bb_num: that.data.bb_numsel, consignee: that.data.consignee, fw_t_num: that.data.array[that.data.fw_t_num], level: that.data.levelnumsel, mobile: that.data.mobile, order_time: that.data.order_time, user_id: wx.getStorageSync('loginbool'), user_note: that.data.user_note, ys_price: that.data.payforn };
+      paramdata = JSON.stringify(paramdata);
+      // console.log(paramdata);
+      app.ask('home/api/order', { appid: app.appid, param: paramdata, yuesao_id: '' }, function (res) {
+        // console.log(res);
+        wx.showToast({
+          title: '请求成功',
+          icon: 'success'
+        });
+        let st = setTimeout(function () {
+          wx.navigateTo({
+            url: '/pages/mydd/mydd',
+          })
+          clearTimeout(st);
+        }, 2000);
+      });
+
     });
   },
   getaddr: function () {

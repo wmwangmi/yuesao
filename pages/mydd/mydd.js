@@ -9,6 +9,28 @@ Page({
     app:app,
     list:{}
   },
+  callkf: function (){
+    let that=this;
+    app.ask('home/api/company_info', { appid: app.appid}, function (res) {
+      console.log(res);
+      if (res.data.data) {
+        wx.makePhoneCall({
+          phoneNumber: res.data.data.mobile,
+          fail:function (){
+            wx.showToast({
+              title: '线路繁忙~',
+              icon: 'none'
+            })
+          }
+        })
+      }else{
+        wx.showToast({
+          title: '线路繁忙',
+          icon: 'none'
+        })
+      }
+    });
+  },
   canceldd: function (e){
     var that = this;
     app.ask('home/api/quxiaoorder', { appid: app.appid, order_id: e.target.dataset.oid }, function (res) {

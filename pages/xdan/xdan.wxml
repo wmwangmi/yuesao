@@ -92,6 +92,6 @@
   <view class='zishu'>{{zilen}}/{{maxzilen}}</view>
 </view>
 <view class='tiaoyue'>
-  阅读并同意<text>《云微家政服务协议》</text>
+  阅读并同意<text>《{{app.allconfig.xieyiname}}服务协议》</text>
 </view>
 <view class='pushdd' bindtap='payaction'>提交订单</view>

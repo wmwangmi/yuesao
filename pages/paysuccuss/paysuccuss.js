@@ -1,4 +1,5 @@
 // pages/paysuccuss/paysuccuss.js
+const app = getApp()
 Page({
 
   /**
