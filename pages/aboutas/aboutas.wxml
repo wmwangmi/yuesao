@@ -13,8 +13,8 @@
     <image mode='widthFix' src='https://www.bodylive.cn/images/jia.png' />{{aboutob.title}}
   </view>
   <view class='content' wx:for='{{aboutob.content}}' wx:key='index'>
-    <view>{{item.text}}</view>
-    <image mode='widthFix' src='{{app.originurl}}{{item.img}}' />
+    <view wx:if='{{item.text}}'>{{item.text}}</view>
+    <image wx:if='{{item.img}}' mode='widthFix' src='{{app.originurl}}{{item.img}}' />
   </view>
   <image class='yzimg' mode='widthFix' src='{{app.originurl}}{{aboutob.thumb}}' />
   <!-- <view class='vediodiv'>
