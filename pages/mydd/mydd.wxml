@@ -1,12 +1,12 @@
 <!--pages/mydd/mydd.wxml-->
-<view wx:if='{{list.w_data[0]}}' class='ddtit'>未完成订单</view>
+<!-- <view wx:if='{{list.w_data[0]}}' class='ddtit'>未完成订单</view> -->
 <view wx:for='{{list.w_data}}' wx:key='index' class='{{item.pay_status==0?"waitpay":"waitwork"}}'>
   <view class='ddtoopdiv'>
     <view class='ddson'>26天住家月子服务</view>
     <view class='ddson'>全额：￥{{item.ys_price}}</view>
   </view>
-  <view class='yuesaodiv' bindtap='gonext' data-oid='{{item.order_id}}'>
-    <view class='left'>
+  <view class='yuesaodiv'>
+    <view class='left' bindtap='goudetail'  data-yid='{{item.goods_id}}'>
       <view class='pinji'>
          <image mode='widthFix' src='https://www.bodylive.cn/images/9ji.png' /> 
       </view>
@@ -15,21 +15,27 @@
       </view>
       <view class='pinjitext'>{{item.spu}}</view>
     </view>
-    <view class='right'>
+    <view class='right' bindtap='gonext' data-oid='{{item.order_id}}'>
       <view class='ddtype'><view class='tip' wx:if='{{item.pay_status==0}}'>等待支付</view><view class='tip' wx:elif='{{item.pay_status==1}}'>全额支付</view></view>
       <view class='top'>
         <view class='name'>{{item.ys_name}}</view>
         <!-- <view class='ysbz'><image mode='widthFix' src='https://www.bodylive.cn/images/yuesaobz.png' /></view> -->
         <view class='name'></view>
       </view>
-      <view class='paytype mart' wx:if='{{item.pay_status==0}}'>
+      <view class='paytype mart'>
+        订单时间：{{item.add_time}}
+      </view>
+      <view class='paytype' wx:if='{{item.pay_status==0}}'>
         未付：<text>￥{{item.ys_price}}</text>
       </view>
-      <view class='paytype mart' wx:if='{{item.pay_status==1}}'>
+      <!-- <view class='paytype' wx:if='{{item.pay_status==1}}'>
         已付：<text>￥{{item.ys_price}}</text>
-      </view>
+      </view> -->
       <view class='paytype'>
         预约时间：{{item.order_time}}
+      </view>
+      <view class='paytype'>
+        {{item.order_sn}}
       </view>
     </view>
   </view>
@@ -42,14 +48,14 @@
 </view>
 
 
-<view wx:if='{{list.y_data[0]}}' class='ddtit'>已完成订单</view>
+<!-- <view wx:if='{{list.y_data[0]}}' class='ddtit'>已完成订单</view> -->
 <view class='done' wx:for='{{list.y_data}}' wx:key='index'>
   <view class='ddtoopdiv'>
     <view class='ddson'>26天住家月子服务</view>
     <view class='ddson'>全额：￥{{item.ys_price}}</view>
   </view>
   <view class='yuesaodiv'>
-    <view class='left'>
+    <view class='left' bindtap='goudetail'  data-yid='{{item.goods_id}}'>
       <view class='pinji'>
          <image mode='widthFix' src='https://www.bodylive.cn/images/9ji.png' /> 
       </view>
@@ -58,7 +64,7 @@
       </view>
       <view class='pinjitext'>{{item.spu}}</view>
     </view>
-    <view class='right'>
+    <view class='right' bindtap='gonext' data-oid='{{item.order_id}}'>
       <view class='ddtype'><view class='tip'>全款支付</view></view>
       <view class='top'>
         <view class='name'>{{item.ys_name}}</view>
@@ -66,10 +72,16 @@
         <view class='name'></view>
       </view>
       <view class='paytype mart'>
+        订单时间：{{item.add_time}}
+      </view>
+      <view class='paytype'>
         已付：<text>￥{{item.ys_price}}</text>
       </view>
       <view class='paytype'>
         预约时间：{{item.order_time}}
+      </view>
+      <view class='paytype'>
+        {{item.order_sn}}
       </view>
     </view>
   </view>

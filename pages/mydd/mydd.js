@@ -60,6 +60,11 @@ Page({
       url: '/pages/fwpj/fwpj?yid=' + e.target.dataset.yid + '&yname=' + e.target.dataset.yname,
     })
   },
+  goudetail: function (e) {
+    wx.navigateTo({
+      url: '/pages/ysdetail/ysdetail?yid=' + e.currentTarget.dataset.yid
+    })
+  },
   gonext:function (e){
     wx.navigateTo({
       url: '/pages/ddxqing/ddxqing?oid=' + e.currentTarget.dataset.oid,

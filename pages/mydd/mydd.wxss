@@ -2,6 +2,7 @@
 @import '../../static/default.wxss';
 .yuesaodiv{
   margin:0;
+  height:320rpx;
 }
 .yuesaodiv .name{
   flex:1;
@@ -53,7 +54,7 @@
   font-size:35rpx;
 }
 .paytype.mart{
-  margin-top:30rpx;
+  margin-top:10rpx;
 }
 .yuesaodiv .right{
   padding-left:20rpx;

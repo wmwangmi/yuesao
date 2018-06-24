@@ -1,4 +1,5 @@
 // pages/fwnr/fwnr.js
+const app = getApp()
 Page({
 
   /**
