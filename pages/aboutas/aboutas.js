@@ -8,6 +8,7 @@ Page({
   data: {
     app:app,
     aboutob:{},
+    content:{},
     danmuList: [
       {
         text: '',
@@ -26,7 +27,7 @@ Page({
     var that = this;
     app.ask('home/api/about', { appid: app.appid }, function (res) {
       that.setData({
-        aboutob:res.data.data
+        aboutob: res.data.data
       });
     });
   },

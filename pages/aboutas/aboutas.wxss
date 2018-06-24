@@ -83,19 +83,8 @@ page{
   line-height:45rpx;
   text-align: left;
 }
-.baicontt .logott{
-  width:90%;
-  height:50rpx;
-  line-height:50rpx;
-  margin:0 auto;
-  color:#444;
-  font-size:25rpx;
-  text-align: left
-}
-.baicontt .logott text{
-  color:#9b7bce;
-  display: inline-block;
-  width:140rpx;
+.baicontt .content image{
+  width:100%;
 }
 .baicontt .yzimg{
   width:90%;

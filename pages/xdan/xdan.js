@@ -65,7 +65,7 @@ Page({
       });
     }
 
-    console.log(e.detail.value);
+    // console.log(e.detail.value);
   },
   getzilen: function (e) {
     if (e.detail.value.length > this.data.maxzilen) {
@@ -129,7 +129,7 @@ Page({
   getmoneynum: function (le, bn) {
     var that = this;
     let bb_num = bn, level = le;
-    console.log(app.appid);
+    console.log(level);
     app.ask('home/api/level_num_price', { appid: app.appid, level: level, bb_num: bb_num }, function (res) {
       if (res.data.data.ys_price) {
         that.setData({

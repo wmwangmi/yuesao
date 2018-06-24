@@ -1,35 +1,20 @@
 <!--pages/aboutas/aboutas.wxml-->
 <view class='aban'>
-  <image mode='widthFix' src='https://www.bodylive.cn/images/jjbanner.jpg' />
+  <image mode='widthFix' src='{{app.originurl}}{{aboutob.thumb}}' />
   <view class='btt'>
-    <text>佳佳母婴护理平台强力打造母婴护理专家</text>
-    <text>来自资深妇幼医院从业20多年经验专家一对一VIP专属服务</text>
+    <text>{{aboutob.description}}</text>
   </view>
 </view>
 <view class='jjtit'>
-  十年专业<text>实力保证</text>
+  {{aboutob.keywords}}
 </view>
 <view class='baicontt'>
   <view class='tt'>
     <image mode='widthFix' src='https://www.bodylive.cn/images/jia.png' />{{aboutob.title}}
   </view>
-  <view class='content'>
-    {{aboutob.content}}
-  </view>
-  <view class='logott'>
-    <text>使命：</text>关爱母婴的健康与幸福
-  </view>
-  <view class='logott'>
-    <text>宗旨：</text>向客户奉上我们发自心底的健康关怀
-  </view>
-  <view class='logott'>
-    <text>价值观：</text>客户是亲人，同事是家人，公司是大家庭
-  </view>
-  <view class='logott'>
-    <text>企业精神：</text>开放包容、分享协作、速度极致
-  </view>
-  <view class='logott'>
-    <text>企业理念：</text>爱心、感恩、利他
+  <view class='content' wx:for='{{aboutob.content}}' wx:key='index'>
+    <view>{{item.text}}</view>
+    <image mode='widthFix' src='{{app.originurl}}{{item.img}}' />
   </view>
   <image class='yzimg' mode='widthFix' src='{{app.originurl}}{{aboutob.thumb}}' />
   <!-- <view class='vediodiv'>
